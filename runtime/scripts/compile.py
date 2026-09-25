@@ -41,6 +41,22 @@ CREAM_RGB = (243, 235, 221)   # #F3EBDD
 LADDER_RETIME = 0.05          # retime silently within ±5%
 LADDER_REFUSE = 0.15          # >15% short → loud warning (still freeze-padded)
 
+# Beat-to-beat dissolve. Clips are cut back to back against the same cream
+# page, so a short fade at each clip's HEAD and TAIL reads as a dissolve while
+# leaving every clip exactly as long as its narration. A real xfade would have
+# to overlap neighbours, sliding the per-beat audio timeline that is this
+# pipeline's master clock. ART_FADE=0 restores hard cuts.
+FADE_S = float(os.environ.get("ART_FADE", "0.20"))
+FADE_COLOR = os.environ.get("ART_FADE_COLOR", "0xF2F0E9")
+
+
+def fade_vf(dur):
+    """Head/tail fade filters for a clip of `dur` seconds. Never changes length."""
+    if FADE_S <= 0 or dur <= FADE_S * 3:
+        return []
+    return [f"fade=t=in:st=0:d={FADE_S:.3f}:color={FADE_COLOR}",
+            f"fade=t=out:st={max(0.0, dur - FADE_S):.3f}:d={FADE_S:.3f}:color={FADE_COLOR}"]
+
 def sh(cmd, **kw):
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode != 0:
@@ -79,6 +95,16 @@ def has_drawtext():
     r = subprocess.run([FFMPEG, "-hide_banner", "-filters"],
                        capture_output=True, text=True)
     return " drawtext " in r.stdout
+
+def ff_filter_path(p):
+    r"""Quote a path for use as a filtergraph option value.
+
+    ffmpeg's filtergraph parser eats backslashes as escapes and splits options
+    on ':', so a raw Windows path like C:\Users\... arrives mangled. Forward
+    slashes work everywhere; the drive colon still needs escaping, and the
+    whole value must be quoted for the escape to survive the parser.
+    """
+    return "'" + str(p).replace("\\", "/").replace(":", r"\:") + "'"
 
 def find_font():
     # prefer the workspace-bundled house serif (EB Garamond) so slate/burn-in
@@ -274,6 +300,7 @@ def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
                 print(f"[art] {bid}: clip {d:.1f}s center-cut to {dur:.1f}s (skip {off:.1f}s head/tail)")
         # freeze-pad any sub-frame shortfall so clip totals match audio totals
         vf.append(f"tpad=stop_mode=clone:stop_duration={dur:.3f}")
+        vf += fade_vf(dur)
         cmd = [FFMPEG, "-y"] + seek + ["-i", src, "-vf", ",".join(vf), "-t", f"{dur + 0.5 / fps:.6f}"] + enc
     elif status == "STILL":
         motion = shot.get("motion", "kenburns")
@@ -302,6 +329,7 @@ def _compile_clip(folder, beat, out, w, h, fps, font, work, fit="crop"):
             z = (f"zoom+{0.08/frames:.6f}" if zin else f"1.08-{0.08/frames:.6f}*on")
             vf.append(f"zoompan=z='{z}':x='(iw-iw/zoom)*{fx:.4f}'"
                       f":y='(ih-ih/zoom)*{fy:.4f}':d={frames}:s={w}x{h}:fps={fps}")
+        vf += fade_vf(dur)
         cmd = [FFMPEG, "-y", "-loop", "1", "-i", src, "-vf", ",".join(vf),
                "-t", f"{dur + 0.5 / fps:.6f}"] + enc
     else:                                                   # slate (PIL — no drawtext needed)
@@ -786,7 +814,7 @@ def compile_reel(a):
                       f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
             prev = "vtitle"
         if a.review and drawtext:
-            fc.append(f"[{prev}]drawtext=fontfile={font}:text='%{{pts\\:hms}}'"
+            fc.append(f"[{prev}]drawtext=fontfile={ff_filter_path(font)}:text='%{{pts\\:hms}}'"
                       f":fontcolor=white:fontsize={int(h*0.04)}:box=1"
                       f":boxcolor=black@0.55:boxborderw=8:x=w-text_w-16:y=16[vout]")
         else:
@@ -814,7 +842,22 @@ def compile_reel(a):
             # Use the resolved source-clock sheet, not stale authored estimates.
             timeline = work / 'resolved-sheet.json'
             atomic_json(timeline, sheet)
-            sh([sys.executable, gate, folder, '--mp4', candidate, '--sheet', timeline])
+            # Mirror run.sh: ART_STRICT=0 downgrades MAJOR to warnings. The
+            # master path previously had no such escape, so a reel could pass
+            # review and still be uncuttable. BLOCKERs always stop the cut.
+            gate_cmd = [sys.executable, str(gate), str(folder), '--mp4', str(candidate),
+                        '--sheet', str(timeline)]
+            lenient = os.environ.get('ART_STRICT', '1') != '1'
+            if lenient:
+                gate_cmd.append('--lenient')
+                print('[art] ART_STRICT=0 — GATE V MAJORs are warnings for this cut')
+            # The checker returns 2 for blocking defects and 1 when anything at
+            # all was found. run.sh only fails on >= 2; the master path used sh(),
+            # which rejected the informational 1 too, so a lenient master could
+            # never be cut. Match run.sh.
+            _rc = subprocess.run(gate_cmd).returncode
+            if _rc >= 2:
+                raise BuildError(f'GATE V blocked the master cut (exit {_rc}) — see _qc/REPORT.md')
             latest = json.loads((folder / a.sheet).read_text())
             validate_approvals(folder, latest)
             # No approval or source edit during an encode may authorize this cut.

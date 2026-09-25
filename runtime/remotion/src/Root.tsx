@@ -162,6 +162,14 @@ import {
   ClaudeScienceSourceFlow, claudeScienceSourceFlowSchema,
   ClaudeScienceChipGrid, claudeScienceChipGridSchema,
 } from './ClaudeScienceIllu';
+// ── claude-liam — Descartes / radical-doubt figures ──
+import {
+  DescartesProtocol, descartesProtocolSchema,
+  DescartesSplit, descartesSplitSchema,
+  DescartesCorrection, descartesCorrectionSchema,
+  DescartesChecklist, descartesChecklistSchema,
+  DescartesLedger, descartesLedgerSchema,
+} from './DescartesIllu';
 // ── claude-liam — math-of-being-afraid-together figures ──
 import {HorrorParadox, horrorParadoxSchema} from './scenes/HorrorParadox';
 import {HorrorAxiom, horrorAxiomSchema} from './scenes/HorrorAxiom';
@@ -737,6 +745,14 @@ import {GitHubCodeDiff,    gitHubCodeDiffSchema}    from './scenes/GitHubCodeDif
 import {GitHubCallChain,   gitHubCallChainSchema}   from './scenes/GitHubCallChain';
 import {GitHubChurn,       gitHubChurnSchema}       from './scenes/GitHubChurn';
 import {BadgeReveal}                               from './scenes/BadgeReveal';
+
+// Scenes render at their registered length and are then hard-trimmed to the
+// beat by ffmpeg -t, so a 30s composition on a 17s beat only ever showed its
+// first 55% and any reveal past that was silently dropped. Sizing the
+// composition from the beat makes the scene clock span the beat exactly.
+const beatMeta = ({props}: {props: Record<string, unknown>}) => ({
+  durationInFrames: Math.max(30, Math.round(Number(props?.beatSeconds ?? 30) * 30)),
+});
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -1389,7 +1405,7 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeComposerAsk"
         component={ClaudeComposerAsk}
         durationInFrames={900}
-        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 30) * 30)})}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 30) * 30)})}
         fps={30}
         width={1920}
         height={1080}
@@ -1640,7 +1656,7 @@ export const RemotionRoot: React.FC = () => {
         })} />
       <Composition id="ClaudeVerdictArtifact" component={ClaudeVerdictArtifact}
         durationInFrames={1020} fps={30} width={1920} height={1080}
-        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 34) * 30)})}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 34) * 30)})}
         schema={claudeVerdictArtifactSchema}
         defaultProps={{
           artifactTitle: 'Verdict',
@@ -1665,13 +1681,13 @@ export const RemotionRoot: React.FC = () => {
         }} />
       <Composition id="ClaudeTitleOutro" component={ClaudeTitleOutro}
         durationInFrames={180} fps={30} width={1920} height={1080}
-        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 6) * 30)})}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 6) * 30)})}
         schema={claudeTitleOutroSchema}
         defaultProps={claudeTitleOutroSchema.parse({})} />
       {/* claude-liam — adaptive-therapy-revolution */}
       <Composition id="ClaudeCodeBeat" component={ClaudeCodeBeat}
         durationInFrames={300} fps={30} width={1920} height={1080}
-        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 10) * 30)})}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 10) * 30)})}
         schema={claudeCodeBeatSchema}
         defaultProps={{
           title: 'script.py',
@@ -2231,6 +2247,32 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames={900} fps={30} width={1280} height={720}
         schema={claudeScienceSourceFlowSchema}
         defaultProps={claudeScienceSourceFlowSchema.parse({})} />
+      {/* ── claude-liam-descartes-doubt — radical-doubt figures ── */}
+      <Composition id="DescartesProtocol" component={DescartesProtocol}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={descartesProtocolSchema}
+        defaultProps={descartesProtocolSchema.parse({})} />
+      <Composition id="DescartesSplit" component={DescartesSplit}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={descartesSplitSchema}
+        defaultProps={descartesSplitSchema.parse({})} />
+      <Composition id="DescartesCorrection" component={DescartesCorrection}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={descartesCorrectionSchema}
+        defaultProps={descartesCorrectionSchema.parse({})} />
+      <Composition id="DescartesChecklist" component={DescartesChecklist}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={descartesChecklistSchema}
+        defaultProps={descartesChecklistSchema.parse({})} />
+      <Composition id="DescartesLedger" component={DescartesLedger}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={descartesLedgerSchema}
+        defaultProps={descartesLedgerSchema.parse({})} />
       <Composition id="ClaudeScienceChipGrid" component={ClaudeScienceChipGrid}
         durationInFrames={900} fps={30} width={1280} height={720}
         schema={claudeScienceChipGridSchema}
@@ -2244,6 +2286,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{data: {slideMeta: '', axis: {min: 1, max: 100, unit: 'yrs'}, band: {from: 5, to: 10, label: 'AI window'}, items: [{label: 'Baseline', value: 50}]}}} />
       <Composition id="DivergentFates" component={DivergentFates}
         durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
         defaultProps={{data: {slideMeta: '', startLabel: 'Start', splitLabel: 'Split', tracks: [{label: 'Track A', outcome: 'Up', tone: 'good', path: 'up', notes: []}, {label: 'Track B', outcome: 'Down', tone: 'warn', path: 'down', notes: []}]}}} />
       <Composition id="BinaryBranch" component={BinaryBranch}
         durationInFrames={900} fps={30} width={1280} height={720}
@@ -4098,7 +4141,7 @@ export const RemotionRoot: React.FC = () => {
           id="BrutalistHesitantWriter"
           component={BrutalistHesitantWriter}
           durationInFrames={606}
-          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 20.2) * 30)})}
+          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 20.2) * 30)})}
           fps={30}
           width={1920}
           height={1080}

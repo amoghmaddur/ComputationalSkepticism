@@ -27,6 +27,10 @@ set -euo pipefail
 
 ART_HOME="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export ART_HOME
+
+# Beat sheets and reports are UTF-8; without this Python picks the locale
+# codec and Windows cp1252 fails to read or write them.
+export PYTHONUTF8=1
 SKILLS="$ART_HOME/skills"
 
 skill_dir() {

@@ -24,6 +24,9 @@ PROJECT = HERE / "remotion"        # the Remotion project
 ENTRY = "src/index.ts"
 CONSUMERS = HERE / "remotion" / "_bench" / "consumers.json"
 FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
+# Windows ships npx as npx.cmd and CreateProcess only auto-resolves .exe,
+# so a bare "npx" raises WinError 2. shutil.which honours PATHEXT.
+NPX = shutil.which("npx") or "npx"
 
 
 def load(p):
@@ -86,8 +89,15 @@ def render_beat(folder: Path, beat: dict, force: bool) -> str:
         with tempfile.TemporaryDirectory(prefix='.remotion-', dir=out.parent) as scratch:
             candidate = Path(scratch) / 'render.mp4'
             props_path = Path(scratch) / 'props.json'
-            atomic_json(props_path, rem.get('props', {}))
-            cmd = ["npx", "remotion", "render", ENTRY, pattern, str(candidate),
+            # Tell the composition how long its beat is; compositions that opt
+            # in via calculateMetadata size themselves to it, so their clock
+            # spans the beat instead of being trimmed mid-animation.
+            _props = dict(rem.get('props', {}))
+            _beat = beat.get('actual_duration_s') or beat.get('estimated_duration_s')
+            if _beat:
+                _props.setdefault('beatSeconds', round(float(_beat), 3))
+            atomic_json(props_path, _props)
+            cmd = [NPX, "remotion", "render", ENTRY, pattern, str(candidate),
                    f"--props={props_path}", "--concurrency=1",
                    "--scale=2", "--image-format=png", "--crf=16"] + browser_flags()
             r = subprocess.run(cmd, cwd=PROJECT, capture_output=True, text=True)

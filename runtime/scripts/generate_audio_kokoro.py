@@ -75,6 +75,9 @@ def normalize_for_tts(text: str) -> str:
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "ffprobe"
 DEFAULT_VOICE = "am_onyx"   # Non-fellows fallback; fellows require an approved choice.
+# Breath at the end of every beat so a cut never lands on the last syllable.
+# Matches the 0.2s video dissolve compile.py puts at each clip edge.
+DEFAULT_TRAIL_S = float(os.environ.get("ART_TRAIL_SILENCE", "0.35"))
 
 
 def model_paths():
@@ -231,6 +234,17 @@ def main():
         bid = b["beat_id"]
         samples, sr = k.create(normalize_for_tts(text), voice=voice,
                                speed=a.speed, lang=lang_for(voice))
+        # `lead_silence_s` is written on beats by doctrine (the BLUF needs a
+        # head start so its typing lands) but nothing read it, so the pad never
+        # existed. Honour it, and give every beat a short tail.
+        lead = float(b.get("lead_silence_s") or 0.0)
+        tail = float(b.get("trail_silence_s") or DEFAULT_TRAIL_S)
+        if lead > 0 or tail > 0:
+            import numpy as _np
+            samples = _np.concatenate([
+                _np.zeros(int(sr * lead), dtype=samples.dtype),
+                samples,
+                _np.zeros(int(sr * tail), dtype=samples.dtype)])
         out = writable_path(folder, f"mp3/beat-{bid}.mp3")
         write_mp3(samples, sr, out)
         dur = measure(out)

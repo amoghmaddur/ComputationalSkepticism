@@ -7,12 +7,12 @@
 # ── core: audio-first narration pipeline ────────────────────────────────────
 kokoro-onnx>=0.4            # the FREE voice engine (Kokoro-82M, local, no key)
 mutagen>=1.47,<1.48         # audio-duration measurement (the master clock)
-Pillow>=10.2,<11            # slates / request cards / previz / stills
+Pillow>=10.2                # slates / request cards / previz / stills
 numpy>=2.0.2
 
 # ── animation ────────────────────────────────────────────────────────────────
-manim>=0.18,<0.19           # pulls manimpango, moderngl, etc.
-manimpango>=0.5,<0.6
+manim>=0.19,<0.22           # pulls manimpango, moderngl, etc.
+manimpango>=0.6,<0.7
 
 # ── captions + word clock ────────────────────────────────────────────────────
 faster-whisper>=1.0,<2      # forced alignment + transcript captions (local, no key)

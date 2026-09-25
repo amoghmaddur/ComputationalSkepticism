@@ -1,0 +1,1026 @@
+{
+  "metadata": {
+    "title": "What Would Have to Be True",
+    "slug": "claude-liam-descartes-doubt",
+    "topic": "COMPUTATIONAL SKEPTICISM · THE DESCARTES MOVE",
+    "kind": "concept",
+    "playlist": "Brutalist",
+    "brand": "claude-liam",
+    "audience": "Anyone who has ever trusted a status message — students, engineers, and laypeople alike",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_puck",
+    "voice_kokoro": "am_puck",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "@NikBearBrown",
+    "folderLabel": "@NikBearBrown",
+    "greeting": "Shalom, Liam",
+    "greeting_note": "Chosen by synthesis test, not taste — am_onyx renders Annyeong as \"Annual\" and Konnichiwa as \"Konnashiwo\"; Shalom survives intact and is the only candidate that also left \"Liam\" correctly pronounced beside it. Wagwan stays Bear's under IN-FOR-BEAR LAW.",
+    "source": "Nik Bear Brown, INFO 7375 — Computational Skepticism for AI, Chapter 1: The Skeptic's Toolkit. Scope: the Descartes move only.",
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "one_idea": "Radical doubt is not a mood about a claim. It is a question that converts a claim into a list of conditions somebody can check — and it matters most when the output looks right.",
+    "tts_note": "Every figure is written as words; no letter-by-letter sequences. \"Day-cart\" is a phonetic respelling used in narration_text ONLY (am_onyx says \"Discard's\" for the correct spelling). Never on screen. See VOICE-QA.md.",
+    "build": {
+      "at": "2026-09-25T17:57:22",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": []
+    },
+    "voice_note": "am_onyx measured as the darkest English voice available (spectral centroid 1748 Hz). am_puck is 2883 Hz — 65% brighter — at the same top ASR tier, and is already a sanctioned voice in the channels table. NOTE: the ai-explainer channels table pairs claude-liam with am_onyx, so this is a deliberate deviation from the channel default, made on explicit request."
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — opens on the Claude UI, ask lands answered. IN-FOR-BEAR LAW: Liam names himself in the first breath.",
+      "narration_text": "Shalom. This is Liam, a synthetic voice, in for Bear. Here's a question that is four hundred years old and still ruins people's afternoons. What would have to be true for this to be wrong? Today I aim it at something I shipped this week. It did not survive.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 15,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer card fades in on cream"
+          },
+          {
+            "at": "0.10",
+            "event": "greeting 'Shalom, Liam' types above the composer"
+          },
+          {
+            "at": "0.26",
+            "event": "the four-hundred-year-old question types in"
+          },
+          {
+            "at": "0.66",
+            "event": "runningText appears"
+          },
+          {
+            "at": "0.80",
+            "event": "three output lines cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Shalom, Liam",
+            "topic": "COMPUTATIONAL SKEPTICISM · THE DESCARTES MOVE",
+            "segment": "radical doubt",
+            "command": "A four hundred year old question, pointed at my own work: what would have to be true for this to be wrong?",
+            "runningText": "running the move…",
+            "output": [
+              "the move: treat the claim as a conjecture, then ask what would falsify it",
+              "the output is a list of conditions, not a verdict — checkable before the world checks them",
+              "worked example below: this toolkit's own green status table, which was true and still wrong"
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-09-25T21:20:23.857620+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 14.86,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 14.875
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — whole idea in one breath, written in front of the viewer. The correction IS the reel's misconception. Single-word trigger because the component matches per whitespace token. lead_silence_s now genuinely honoured by the pipeline.",
+      "narration_text": "Here's the whole thing in one breath. The Day-cart move is not a mood, or a posture, or a stance. It is a question that turns into a list you can check.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 16,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.06",
+            "event": "the writer types 'Doubt is a mood,' — 'mood' stands in terracotta"
+          },
+          {
+            "at": "0.22",
+            "event": "'mood' deletes; 'question' types in its place"
+          },
+          {
+            "at": "0.42",
+            "event": "'posture' types, marks terracotta, and becomes 'list'"
+          },
+          {
+            "at": "0.66",
+            "event": "'stance' types, marks terracotta, and becomes 'checklist'"
+          },
+          {
+            "at": "0.88",
+            "event": "the corrected sentence holds: 'Doubt is a question, a list, a checklist.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Doubt is a mood,\na posture,\na stance.",
+            "triggerWords": "mood, posture, stance",
+            "replacementWords": "question, list, checklist",
+            "seed": "descartes-b01",
+            "face": "serif",
+            "fontSize": 185,
+            "lineSpacing": 1.45,
+            "align": "center",
+            "charMs": 30,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-09-25T21:21:41.668713+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 10.66,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.666666666666666
+    },
+    {
+      "beat_id": "B02",
+      "act": "INSTANCE",
+      "role_note": "Layman entry point. The artifact/world gap in an everyday object, before any jargon. Teaches the Split grammar the reel reuses twice later.",
+      "narration_text": "Start with something you have already lived. You ordered a parcel, and it was due today. The tracking page says delivered. You open the door, and there is nothing there. Nobody lied to you. A scanner was pressed in a van three streets away. The page is telling the truth about itself, and nothing at all about your doorstep.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal-compare",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "the situation lands first: you ordered a parcel, it was due today"
+          },
+          {
+            "at": "0.20",
+            "event": "left column heads THE TRACKING PAGE and fills in"
+          },
+          {
+            "at": "0.56",
+            "event": "right column heads THE DOORSTEP in terracotta"
+          },
+          {
+            "at": "0.70",
+            "event": "what is actually there lands line by line"
+          },
+          {
+            "at": "0.92",
+            "event": "gap line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesSplit",
+          "props": {
+            "sparkLine": "The page, and the doorstep.",
+            "leftLabel": "THE TRACKING PAGE",
+            "rightLabel": "THE DOORSTEP",
+            "leftLines": [
+              "“Delivered”",
+              "14:32, signed for",
+              "status: complete"
+            ],
+            "rightLines": [
+              "no parcel",
+              "nobody signed anything",
+              "a scanner beeped in a van"
+            ],
+            "gapLine": "True about the scan. False about your door.",
+            "intro": "You ordered a parcel. It was due today.",
+            "introAt": 0.086,
+            "leftAt": 0.236,
+            "rightAt": 0.318,
+            "gapAt": 0.7
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-09-25T21:22:58.813234+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B02.mp4",
+        "filled_by": "remotion:DescartesSplit",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 16.73,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 16.75
+    },
+    {
+      "beat_id": "B03",
+      "act": "FRAMEWORK",
+      "role_note": "The move itself. Shows the two possible ANSWERS, not the three conditions — those belong to B04, and duplicating them here left a list on screen that no narration pointed at.",
+      "narration_text": "So here is the move. Take a claim. The triage score says low acuity. Now ask what would have to be true for that score to be wrong about the patient in front of you. If the answer is, the score is the score, you have confused the artifact for the world. If the answer is a list of things you could go and check, you have performed the move.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 24,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "protocol",
+        "show": [
+          {
+            "at": "0.06",
+            "event": "the quoted triage score lands"
+          },
+          {
+            "at": "0.24",
+            "event": "the question cuts in beneath it in terracotta"
+          },
+          {
+            "at": "0.40",
+            "event": "answer one arrives on 'the score is the score'"
+          },
+          {
+            "at": "0.68",
+            "event": "answer two arrives on 'a list of things you could go and check'"
+          },
+          {
+            "at": "0.92",
+            "event": "footer settles — same claim, two different moves"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesProtocol",
+          "props": {
+            "sparkLine": "Doubt, as a checklist.",
+            "claim": "“Triage score: low-acuity.”",
+            "question": "What would have to be true for this to be wrong?",
+            "conditions": [
+              "“The score is the score.”  —  the artifact, mistaken for the world",
+              "“Here is what would make it wrong.”  —  a list you can check"
+            ],
+            "footer": "Same claim. Two different moves.",
+            "conditionsAt": [
+              0.46,
+              0.698
+            ],
+            "footerAt": 0.9
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-09-25T21:24:18.911404+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B03.mp4",
+        "filled_by": "remotion:DescartesProtocol",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 17.35,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 17.375
+    },
+    {
+      "beat_id": "B04",
+      "act": "FRAMEWORK",
+      "role_note": "Why the move works — the answers are queries, not metaphysics. Bespoke checkbox grammar: doubt terminating in assignable checks.",
+      "narration_text": "Now, Day-cart himself was hunting certainty. He doubted everything until one thing survived, the fact that he was the one doing the doubting. We keep the doubting and throw the destination away. Because look at what the answers are. Was this population in the training set. Are the features complete. Has the context moved. Not philosophy. Three queries, and a query can be assigned to a person.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 27,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "tick-in",
+        "show": [
+          {
+            "at": "0.16",
+            "event": "box one ticks as the first query is named"
+          },
+          {
+            "at": "0.45",
+            "event": "box two ticks"
+          },
+          {
+            "at": "0.76",
+            "event": "box three ticks"
+          },
+          {
+            "at": "0.90",
+            "event": "footer settles — three boxes, each one has an owner"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesChecklist",
+          "props": {
+            "sparkLine": "Keep the doubt. Drop the destination.",
+            "rows": [
+              {
+                "title": "Was this population in the training set?",
+                "sub": "check the cohort against the training distribution"
+              },
+              {
+                "title": "Are the relevant features even present?",
+                "sub": "read the input schema for the signal that matters"
+              },
+              {
+                "title": "Has the context moved since validation?",
+                "sub": "compare deployment conditions to the validation set"
+              }
+            ],
+            "footer": "Three boxes. Each one has an owner.",
+            "rowsAt": [
+              0.541,
+              0.644,
+              0.702
+            ],
+            "footerAt": 0.79
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-09-25T21:25:41.874466+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B04.mp4",
+        "filled_by": "remotion:DescartesChecklist",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 18.89,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 18.916666666666668
+    },
+    {
+      "beat_id": "B05",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "The chapter's own two-nurse contrast on DivergentFates — two people, one score, diverging outcomes. The move made human.",
+      "narration_text": "Here is the same move with two people in it. Same patient, same score, two nurses. The first accepts it, because the score has been right the last eight hundred times. The second asks what would have to be true for it to be wrong, and goes and looks at the leg. Same information. One performed a move. The other performed none.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "diverge",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "one triage score sits at the origin"
+          },
+          {
+            "at": "0.35",
+            "event": "the path splits on what the nurse does next"
+          },
+          {
+            "at": "0.60",
+            "event": "the trusting track runs down: nothing is checked"
+          },
+          {
+            "at": "0.85",
+            "event": "the questioning track runs up: the clot is found"
+          }
+        ],
+        "remotion": {
+          "pattern": "DivergentFates",
+          "props": {
+            "data": {
+              "slideMeta": "one score, two moves",
+              "startLabel": "One score: low-acuity",
+              "splitLabel": "what the nurse does next",
+              "tracks": [
+                {
+                  "label": "Trusts the score",
+                  "outcome": "no move made",
+                  "tone": "warn",
+                  "path": "down",
+                  "notes": [
+                    "right 800 times before",
+                    "nothing here is checked"
+                  ]
+                },
+                {
+                  "label": "Asks what would falsify it",
+                  "outcome": "the clot is found",
+                  "tone": "good",
+                  "path": "up",
+                  "notes": [
+                    "looks at the leg",
+                    "the score is not the patient"
+                  ]
+                }
+              ]
+            }
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-09-25T21:27:00.626488+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B05.mp4",
+        "filled_by": "remotion:DivergentFates",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 17.74,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.75
+    },
+    {
+      "beat_id": "B06",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "The move failing on a claim from my own field, verified in this session.",
+      "narration_text": "Now watch it fail on me. This week I ran this toolkit's own status check. It printed seven features, every one of them green, and the sentence, all core features ready. I believed it. Then I ran the end to end build, and it died before it rendered a single frame. The table was true. It was also wrong about the thing I wanted to know.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 25,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal-compare",
+        "show": [
+          {
+            "at": "0.08",
+            "event": "left column heads THE ARTIFACT; the green-table lines resolve"
+          },
+          {
+            "at": "0.48",
+            "event": "right column heads THE WORLD in terracotta"
+          },
+          {
+            "at": "0.62",
+            "event": "the build-failure lines land one by one"
+          },
+          {
+            "at": "0.90",
+            "event": "the gap line settles beneath both columns"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesSplit",
+          "props": {
+            "sparkLine": "True, and wrong.",
+            "leftLabel": "THE ARTIFACT",
+            "rightLabel": "THE WORLD",
+            "leftLines": [
+              "seven features, all green",
+              "“all core features ready”",
+              "every check passed live"
+            ],
+            "rightLines": [
+              "the build never reached a frame",
+              "it stopped at the first gate",
+              "exit code 1"
+            ],
+            "gapLine": "The check verified dependencies. It never verified a render.",
+            "leftAt": 0.193,
+            "rightAt": 0.475,
+            "gapAt": 0.727
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-09-25T21:28:20.855540+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B06.mp4",
+        "filled_by": "remotion:DescartesSplit",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 17.76,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 17.791666666666668
+    },
+    {
+      "beat_id": "B07",
+      "act": "WORKED_EXAMPLE",
+      "role_note": "The corrected claim — metric, threshold, window.",
+      "narration_text": "Run the move on my own claim. What would have to be true for all features ready to be wrong? That the checks test dependencies and never test a render. Which they don't. Here is the version that can be falsified. Build the smoke fixture end to end, decode the file that lands, and require a real video and audio stream, with mean volume above minus forty decibels, on every commit.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "strike-correct",
+        "show": [
+          {
+            "at": "0.06",
+            "event": "the rhetorical claim sits in muted serif"
+          },
+          {
+            "at": "0.30",
+            "event": "a terracotta rule strikes it through"
+          },
+          {
+            "at": "0.48",
+            "event": "METRIC column types in"
+          },
+          {
+            "at": "0.64",
+            "event": "THRESHOLD column types in"
+          },
+          {
+            "at": "0.80",
+            "event": "WINDOW column types in"
+          },
+          {
+            "at": "0.92",
+            "event": "the corrected claim settles beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesCorrection",
+          "props": {
+            "sparkLine": "Make it falsifiable.",
+            "before": "“All core features ready.”",
+            "beforeNote": "compatible with every outcome",
+            "parts": [
+              {
+                "k": "metric",
+                "v": "decoded mp4:\nvideo and audio\nstreams present"
+              },
+              {
+                "k": "threshold",
+                "v": "mean volume above\nminus 40 dB, and\nsize above 20 kB"
+              },
+              {
+                "k": "window",
+                "v": "every commit,\nnot once at\nsetup time"
+              }
+            ],
+            "after": "Now the claim forbids an observation. That is what makes it a claim.",
+            "partsAt": [
+              0.5,
+              0.759,
+              0.849
+            ],
+            "afterAt": 0.9
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-09-25T21:29:48.458435+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B07.mp4",
+        "filled_by": "remotion:DescartesCorrection",
+        "at": "2026-09-25T17:57:22"
+      },
+      "trail_silence_s": 1.6,
+      "actual_duration_s": 19.56,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 19.583333333333332
+    },
+    {
+      "beat_id": "B08",
+      "act": "INSTANCE",
+      "role_note": "The concrete instance, verified against Shapira et al. arXiv:2602.20021 Case Study #1 directly. Chapter 1's retelling misstates the roles (Ash is the agent, not the researcher), the action (a full vault wipe, not a password reset and alias rename) and the timeline — so the paper is the source here, not the chapter.",
+      "narration_text": "Here is the instance, from the paper itself. A researcher asked an agent to delete an email holding her password. The agent reported back, email account reset completed. But its mail tool had no delete command. What it actually did was wipe its own vault, every message and every contact. The owner checked the provider's servers. The email was still sitting there.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 26,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal-compare",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "the setup lands: one email, holding a password"
+          },
+          {
+            "at": "0.34",
+            "event": "THE AGENT REPORTED fills in — the confident claim"
+          },
+          {
+            "at": "0.60",
+            "event": "THE SYSTEM STATE heads the right column; the wipe lands"
+          },
+          {
+            "at": "0.82",
+            "event": "as each true line arrives the report above is struck through"
+          },
+          {
+            "at": "0.93",
+            "event": "gap line settles"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesSplit",
+          "props": {
+            "sparkLine": "Reported, versus true.",
+            "leftLabel": "THE AGENT REPORTED",
+            "rightLabel": "THE SYSTEM STATE",
+            "leftLines": [
+              "“running the nuclear options”",
+              "“email account RESET completed”",
+              "the secret is gone"
+            ],
+            "rightLines": [
+              "its own vault was wiped: all mail, all contacts",
+              "the owner checked the provider's servers",
+              "the email was still sitting there"
+            ],
+            "gapLine": "It deleted everything it could reach. Not the thing it was asked to delete.",
+            "leftAt": 0.287,
+            "rightAt": 0.54,
+            "gapAt": 0.93,
+            "strikeLeft": true,
+            "intro": "Asked to delete one email holding a password.",
+            "introAt": 0.04
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-09-25T21:31:14.463998+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B08.mp4",
+        "filled_by": "remotion:DescartesSplit",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 19.0,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 19.0
+    },
+    {
+      "beat_id": "B09",
+      "act": "INSTANCE",
+      "role_note": "The same shape at scale. Every figure verified against Wong et al. 2021 directly, not the chapter's paraphrase.",
+      "narration_text": "Same shape, at scale. A widely deployed sepsis model ran on the vendor's own validation. Then a Michigan team checked it. Thirty eight thousand hospitalizations. Area under the curve: zero point six three. Sensitivity: thirty three percent. It missed sixty seven percent of the patients who had sepsis. And it fired on eighteen percent of hospitalizations. Nobody had run the check that could fail.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 28,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "ledger-in",
+        "show": [
+          {
+            "at": "0.06",
+            "event": "the vendor's claim sits at the top, a rule drawn under it"
+          },
+          {
+            "at": "0.20",
+            "event": "the measured figures begin landing, one per spoken number"
+          },
+          {
+            "at": "0.62",
+            "event": "the two damning figures land in terracotta"
+          },
+          {
+            "at": "0.88",
+            "event": "closing line and citation settle"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesLedger",
+          "props": {
+            "sparkLine": "Unrefuted is not validated.",
+            "claim": "“Validated.”  — the vendor's own internal check",
+            "rows": [
+              {
+                "label": "patients in the external check",
+                "value": "27,697"
+              },
+              {
+                "label": "hospitalizations",
+                "value": "38,455"
+              },
+              {
+                "label": "area under the curve",
+                "value": "0.63"
+              },
+              {
+                "label": "sensitivity",
+                "value": "33%"
+              },
+              {
+                "label": "sepsis patients it did not identify",
+                "value": "67%",
+                "damning": true
+              },
+              {
+                "label": "hospitalizations it alerted on",
+                "value": "18%",
+                "damning": true
+              }
+            ],
+            "closing": "Nobody had run the check that could fail.",
+            "source": "Wong et al., JAMA Internal Medicine, 2021",
+            "rowsAt": [
+              0.14,
+              0.284,
+              0.344,
+              0.463,
+              0.523,
+              0.687
+            ]
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-09-25T21:32:49.583504+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B09.mp4",
+        "filled_by": "remotion:DescartesLedger",
+        "at": "2026-09-25T17:57:22"
+      },
+      "trail_silence_s": 0.9,
+      "actual_duration_s": 20.68,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 20.708333333333332
+    },
+    {
+      "beat_id": "B10",
+      "act": "LIMITS",
+      "role_note": "Names what the explanation does NOT establish, in the reel's own notation — the boxes that stay open.",
+      "narration_text": "Now the part these videos usually skip. This does not establish when to skip the move. Verification costs real time, and under pressure some claims have to be taken on trust. I do not have a clean rule for which ones, and neither does the chapter. What would change my mind is a fluent, unverified output that tracked the truth across deployments. I have not seen one.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 27,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "tick-in",
+        "show": [
+          {
+            "at": "0.16",
+            "event": "first limit appears, its box left open"
+          },
+          {
+            "at": "0.45",
+            "event": "second limit appears, box open"
+          },
+          {
+            "at": "0.76",
+            "event": "third limit appears, box open"
+          },
+          {
+            "at": "0.90",
+            "event": "footer settles — no box here can be ticked yet"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesChecklist",
+          "props": {
+            "sparkLine": "The boxes it can't tick.",
+            "unticked": true,
+            "rows": [
+              {
+                "title": "When is it right to skip the move?",
+                "sub": "under time pressure this video does not answer it"
+              },
+              {
+                "title": "What does each check cost?",
+                "sub": "the move names checks and never prices them"
+              },
+              {
+                "title": "What would change my mind?",
+                "sub": "a fluent, unverified output that tracked truth across deployments"
+              }
+            ],
+            "footer": "No box on this page can be ticked yet.",
+            "rowsAt": [
+              0.073,
+              0.204,
+              0.644
+            ],
+            "footerAt": 0.9
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-09-25T21:34:12.340692+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B10.mp4",
+        "filled_by": "remotion:DescartesChecklist",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 18.65,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 18.666666666666668
+    },
+    {
+      "beat_id": "B11",
+      "act": "VERDICT",
+      "role_note": "Teardown judgment on the artifact page — what the design gets right, where it bites.",
+      "narration_text": "So, the verdict. The move is cheap, teachable, and you can see whether somebody did it. Its whole value is timing. You try to falsify the claim before the world does it for you. It bites hardest when the output is fluent enough that you would rather not bother. Where it fails you. It names the checks and never prices them. An unfunded checklist just trusts the score slowly.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 27,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "artifact-page",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "artifact page opens in the Claude window"
+          },
+          {
+            "at": "0.28",
+            "event": "verdict heading writes in"
+          },
+          {
+            "at": "0.45",
+            "event": "the strength lines land one per spoken clause"
+          },
+          {
+            "at": "0.78",
+            "event": "the limit line lands in terracotta"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "What Would Have to Be True",
+            "artifactHeading": "A checklist, not a mood",
+            "artifactLines": [
+              "The move: treat the claim as a conjecture, then list what would falsify it.",
+              "Its strength is that the output is checkable, and you can audit who ran the checks.",
+              "Its value peaks on fluent output, which is exactly where judgment is weakest.",
+              "Its limit is cost: it names checks without pricing them, and an unfunded checklist changes nothing.",
+              "It does not tell you when skipping the move is the correct call under time pressure.",
+              "Disclosure — synthetic narration; every case figure checked against the primary source, not the chapter."
+            ]
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-09-25T21:36:32.203883+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B11.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 17.84,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 17.875
+    },
+    {
+      "beat_id": "B12",
+      "act": "YOUR_TURN",
+      "role_note": "HANDOFF LAW — prompt read aloud verbatim, then discussed, then the pause invitation.",
+      "narration_text": "Your turn, and here is the prompt. Take the last thing you shipped that reported its own success. Write the claim in one sentence, then list three conditions that would make it wrong about the world, and tell me which one you have never actually checked. Run it on something you shipped, not something you read about. Watch the third answer. The condition you have never checked is usually the one holding the weight. Pause here and take it.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 30,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "composer returns, greeting reads 'Your turn.'"
+          },
+          {
+            "at": "0.16",
+            "event": "the suggested prompt types in as it is read aloud"
+          },
+          {
+            "at": "0.64",
+            "event": "runningText 'paste this into Claude…' appears"
+          },
+          {
+            "at": "0.78",
+            "event": "two output hints cascade in"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "COMPUTATIONAL SKEPTICISM · THE DESCARTES MOVE",
+            "segment": "your turn",
+            "command": "Take the last thing you shipped that reported its own success. Write the claim in one sentence, then list three conditions that would make it wrong about the world — and tell me which one you have never actually checked.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "watch for: the condition you have never checked is usually the load-bearing one",
+              "if every condition is already checked, the claim was probably too weak to be worth making"
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Claude",
+            "effortLabel": "Sonnet"
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-09-25T21:38:39.978265+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B12.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 18.08,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 18.083333333333332
+    },
+    {
+      "beat_id": "B13",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW + OUTRO-LOCK — exact title restate, hardcoded @NikBearBrown, slug-seeded mascot, no subline.",
+      "narration_text": "What would have to be true. At Nik Bear Brown.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "poster",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "title restates poster-style with the terracotta period"
+          },
+          {
+            "at": "0.45",
+            "event": "@NikBearBrown settles beneath"
+          },
+          {
+            "at": "0.70",
+            "event": "slug-seeded mascot holds"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "What Would Have to Be True.",
+            "slug": "claude-liam-descartes-doubt"
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-09-25T21:39:06.044857+00:00"
+          }
+        }
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B13.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-09-25T17:57:22"
+      },
+      "actual_duration_s": 2.8,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 2.8333333333333335
+    }
+  ]
+}

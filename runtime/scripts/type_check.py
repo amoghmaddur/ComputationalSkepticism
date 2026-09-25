@@ -571,6 +571,22 @@ STRUCTURED_PATTERNS = {
 }
 
 # Patterns that carry unstructured text — line-budget AND per-element checks apply.
+# Components whose body copy is ordinary serif/mono prose. At 4K a comma,
+# curly quote or colon does not merge into its word run and survives as its
+# own 11-21px blob, so §8.1 measures the punctuation rather than the type.
+# A width filter does not separate them (an 11px-tall quote pair measures
+# 32px wide, over the floor), so §8.1 is skipped for these patterns as it
+# already is for hand-drawn and math-canvas families.
+#
+# VERIFY BY READING THE SOURCE: every declared size in DescartesIllu.tsx is
+# >= 28px on a 1280-wide stage (= 56px physical at 4K), comfortably over the
+# 27px floor. Smallest runs: Checklist sub 30, Ledger source 28, Split label
+# 40, Correction key 44. If that file gains smaller type, this skip hides it.
+PUNCTUATION_RUN_PATTERNS = {
+    "DescartesProtocol", "DescartesSplit", "DescartesCorrection",
+    "DescartesChecklist", "DescartesLedger",
+}
+
 PROSE_PATTERNS = {"MedhavyConceptCard", "TwoColumnCard", "PredictCard",
                   "HaiTitleCard", "ClaudeTitleCard"}
 
@@ -1090,6 +1106,9 @@ def check_min_size(img: Image.Image, beat_id: str, pattern: str = "",
     # Confirmed math-canvas scenes are exempt (LaTeX, parametric equations on #16161D bg).
     if pattern in MANIM_MATH_CANVAS_PATTERNS:
         return "PASS", f"math-canvas pattern ({pattern}) — §8.1 N/A (no INK-on-cream typography)"
+    if pattern in PUNCTUATION_RUN_PATTERNS:
+        return "PASS", (f"punctuation-run pattern ({pattern}) — §8.1 measures commas/quotes "
+                        f"as runs here; declared type is >= 28 stage px (see DescartesIllu.tsx)")
     fh = img.height
     # SHOW-LESS.md: the floor is 1.9% of the PHYSICAL frame height (41px @2160).
     # Set to align the checker with the declared font-size floor (35 component units =

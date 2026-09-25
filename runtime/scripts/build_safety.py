@@ -37,7 +37,9 @@ def atomic_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(prefix='.' + path.name + '.', dir=path.parent)
     try:
-        with os.fdopen(fd, 'w') as f:
+        # utf-8 explicitly: ensure_ascii=False emits raw non-ASCII, which the
+        # locale codec cannot encode on a non-UTF-8 console (Windows cp1252).
+        with os.fdopen(fd, 'w', encoding='utf-8') as f:
             json.dump(value, f, indent=2, ensure_ascii=False, allow_nan=False)
             f.write('\n')
             f.flush()
@@ -62,7 +64,7 @@ def atomic_text(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(prefix='.' + path.name + '.', dir=path.parent)
     try:
-        with os.fdopen(fd, 'w') as f:
+        with os.fdopen(fd, 'w', encoding='utf-8') as f:
             f.write(text)
         os.replace(tmp, path)
     finally:
@@ -183,7 +185,7 @@ def validate_project(sheet):
         if is_source_report(b, sheet) and (b.get('shot') or {}).get('remotion'):
             raise BuildError(f'{bid}: source reports cannot also be generated Remotion scenes')
     slug = (sheet.get('metadata') or {}).get('slug', 'reel')
-    if not isinstance(slug, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*', slug):
+    if not isinstance(slug, str) or not re.fullmatch(r'[A-Za-z0-9_][A-Za-z0-9._-]*', slug):
         raise BuildError('metadata.slug must be a filename, not a path')
     default_voice(sheet)
     from math_layout_check import math_layout_errors

@@ -382,7 +382,11 @@ export const DivergentFates: React.FC<{data: FatesData}> = ({data}) => {
   const {width: W, height: H, durationInFrames} = useVideoConfig();
   const p = clamp(frame / Math.max(1, durationInFrames - 1), 0, 1);
 
-  const x0 = 150, xSplit = W * 0.34, x1 = W - 300;
+  // Outcome cards are drawn at x1 + 8 with width 268, so anchoring x1 off the
+  // raw frame width (W - 300) put their right edge at W - 24 — outside the 5%
+  // title-safe inset, which GATE V flags as edge-bleed. Derive x1 from the
+  // inset so the card lands ON the safe edge instead of past it.
+  const x0 = 150, xSplit = W * 0.34, x1 = W * 0.95 - 284;
   const yMid = H * 0.46, yUp = H * 0.20, yDn = H * 0.72;
   const tracks = data.tracks;
   const toneCol = (t: string) => (t === 'warn' ? WARN : t === 'good' ? GOOD : INK);

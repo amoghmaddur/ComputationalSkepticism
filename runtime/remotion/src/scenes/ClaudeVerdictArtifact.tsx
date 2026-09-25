@@ -41,14 +41,22 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
   artifactTitle, artifactHeading, artifactLines, brandLabel,
 }) => {
   const frame = useCurrentFrame();
-  const { fps, width } = useVideoConfig();
+  const { fps, width, durationInFrames } = useVideoConfig();
 
   const cardIn = spring({ frame, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
   const headIn = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
 
-  // Fill the frame: ~84% of width, capped so ultrawide stays readable.
-  const cardW = Math.min(width * 0.84, 1560);
+  // Fill the frame: ~88% of width, capped so ultrawide stays readable.
+  const cardW = Math.min(width * 0.92, 1760);
   const lines = (artifactLines ?? []).map(stripLeadNum);
+
+  // FILL-THE-CANVAS: type scales to the room the line count leaves. Short
+  // verdicts rendered at ~52% of the safe area on a fixed 28px body. Reels
+  // with 6+ lines keep the original sizes, so existing cuts are unchanged.
+  const n = lines.length;
+  const bodySize = n <= 4 ? 48 : n <= 5 ? 44 : n <= 6 ? 34 : 28;
+  const headSize = n <= 5 ? 74 : n <= 6 ? 54 : 46;
+  const lineGap = n <= 5 ? 46 : n <= 6 ? 32 : 26;
 
   return (
     <AbsoluteFill style={{ background: '#F2F0E9', alignItems: 'center', justifyContent: 'center' }}>
@@ -78,7 +86,7 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
         <div style={{ padding: '48px 60px 54px' }}>
           {/* Heading */}
           <div style={{
-            fontFamily: SERIF, fontSize: 46, fontWeight: 700, color: CLAUDE.INK,
+            fontFamily: SERIF, fontSize: headSize, fontWeight: 700, color: CLAUDE.INK,
             marginBottom: 36,
             opacity: clamp(headIn, 0, 1),
           }}>
@@ -87,18 +95,22 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
 
           {/* Lines */}
           {lines.map((line, i) => {
-            const lineIn = spring({ frame: frame - (i + 2) * 7, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
+            // Stagger across the beat, not a fixed 7-frame offset. The old
+            // spacing landed every line inside ~2s, so an 18s verdict beat sat
+            // static for 16s. Lines now finish arriving at ~80% of the beat.
+            const slot = Math.max(7, (durationInFrames * 0.80 - 16) / Math.max(1, lines.length));
+            const lineIn = spring({ frame: frame - (16 + i * slot), fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
             const op = clamp(lineIn, 0, 1);
             const ty = (1 - op) * 12;
             return (
               <div key={i} style={{
                 display: 'flex', alignItems: 'flex-start', gap: 22,
-                marginBottom: 26, opacity: op, transform: `translateY(${ty}px)`,
+                marginBottom: lineGap, opacity: op, transform: `translateY(${ty}px)`,
               }}>
-                <span style={{ fontFamily: SANS, fontSize: 28, color: CLAUDE.SPARK, flexShrink: 0, marginTop: 3, fontWeight: 700 }}>
+                <span style={{ fontFamily: SANS, fontSize: bodySize, color: CLAUDE.SPARK, flexShrink: 0, marginTop: 3, fontWeight: 700 }}>
                   {i + 1}.
                 </span>
-                <span style={{ fontFamily: SANS, fontSize: 28, color: CLAUDE.INK, lineHeight: 1.55 }}>
+                <span style={{ fontFamily: SANS, fontSize: bodySize, color: CLAUDE.INK, lineHeight: 1.55 }}>
                   {line}
                 </span>
               </div>

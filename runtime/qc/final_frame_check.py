@@ -46,7 +46,12 @@ SAFE916 = {"x": 54, "y": 96, "r": 1026, "b": 1824, "w": 972, "h": 1728}
 INK_DELTA = 28        # per-channel distance from background to count as content ink
 FILL_MIN  = 0.55      # min content-bbox coverage of SAFE (canvas-fill law)
 CONTRAST_MIN = 0.30   # min luminance separation ink vs bg (0..1)
-BURN_IN_EXCLUDE = (0.0, 0.94, 0.60, 1.0)  # (x0,y0,x1,y1) frac — QC burn-in strip, ignored
+# (x0,y0,x1,y1) frac — review-only burn-in, ignored. Both are chrome `art run`
+# draws over the cut and `art final` never emits, so neither is content.
+BURN_IN_EXCLUDE = (
+    (0.0,  0.94, 0.60, 1.0 ),   # beat-label strip, bottom-left
+    (0.75, 0.0,  1.0,  0.10),   # timecode readout, top-right (compile.py drawtext)
+)
 
 
 def _safe_for(w, h):
@@ -78,10 +83,10 @@ def _background(arr):
 def _ink_mask(arr, bg):
     d = np.abs(arr.astype(float) - bg).max(axis=2)
     m = d > INK_DELTA
-    # blank the QC burn-in strip so it isn't read as edge-bleed content
+    # blank the QC burn-in regions so they aren't read as edge-bleed content
     h, w = m.shape
-    x0, y0, x1, y1 = BURN_IN_EXCLUDE
-    m[int(y0 * h):int(y1 * h), int(x0 * w):int(x1 * w)] = False
+    for x0, y0, x1, y1 in BURN_IN_EXCLUDE:
+        m[int(y0 * h):int(y1 * h), int(x0 * w):int(x1 * w)] = False
     return m
 
 

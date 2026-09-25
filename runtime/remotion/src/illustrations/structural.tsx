@@ -54,12 +54,19 @@ import { SERIF, SANS, MONO, clamp, remap, ease, useP } from './kit';
  * ADAPT: swap the layer list. Mark the ONE card that matters accent.   *
  * ==================================================================== */
 export type Layer = { title: string; sub: string; accent?: boolean };
-export const LayerStack: React.FC<{ layers: Layer[]; caption?: string; top?: number }> = ({ layers, caption, top = 150 }) => {
+export const LayerStack: React.FC<{
+  layers: Layer[]; caption?: string; top?: number;
+  /** Fraction of the beat the layers appear over. Default 0.5 keeps existing
+   *  reels identical; raise it so a long beat does not finish its reveal at
+   *  the halfway mark and then hold a static frame to the cut. */
+  spread?: number;
+  captionAt?: number;
+}> = ({ layers, caption, top = 150, spread = 0.5, captionAt = 0.72 }) => {
   const p = useP();
   return (
     <>
       {layers.map((l, i) => {
-        const t0 = 0.08 + i * (0.5 / Math.max(1, layers.length)); // spread appearance across the first half
+        const t0 = 0.08 + i * (spread / Math.max(1, layers.length));
         const lp = ease(remap(p, t0, t0 + 0.12, 0, 1));
         if (lp <= 0) return null;
         return (
@@ -75,7 +82,7 @@ export const LayerStack: React.FC<{ layers: Layer[]; caption?: string; top?: num
         );
       })}
       {caption && (
-        <div style={{ position: 'absolute', bottom: 96, left: 0, right: 0, textAlign: 'center', fontFamily: SANS, fontSize: 24, color: CLAUDE.INK_SOFT, opacity: remap(p, 0.72, 0.82, 0, 1) }}>
+        <div style={{ position: 'absolute', bottom: 96, left: 0, right: 0, textAlign: 'center', fontFamily: SANS, fontSize: 24, color: CLAUDE.INK_SOFT, opacity: remap(p, captionAt, captionAt + 0.10, 0, 1) }}>
           {caption}
         </div>
       )}
@@ -197,12 +204,15 @@ export const SourceFlow: React.FC<{
  * ADAPT: swap the item list; grid re-flows. Each dot lights spark when *
  *   its chip has fully settled — the "landed" accent.                  *
  * ==================================================================== */
-export const ChipGrid: React.FC<{ items: string[]; cols?: number; caption?: string }> = ({ items, cols = 3, caption }) => {
+export const ChipGrid: React.FC<{
+  items: string[]; cols?: number; caption?: string;
+  spread?: number; captionAt?: number;
+}> = ({ items, cols = 3, caption, spread = 0.7, captionAt = 0.78 }) => {
   const p = useP();
   const cw = 300, ch = 96, gapX = 46, gapY = 42;
   const gridW = cols * cw + (cols - 1) * gapX;
   const x0 = (1280 - gridW) / 2, y0 = 168;
-  const step = 0.7 / Math.max(1, items.length); // spread over first 70%
+  const step = spread / Math.max(1, items.length);
   return (
     <>
       {items.map((t, i) => {
@@ -224,7 +234,7 @@ export const ChipGrid: React.FC<{ items: string[]; cols?: number; caption?: stri
         );
       })}
       {caption && (
-        <div style={{ position: 'absolute', bottom: 92, left: 0, right: 0, textAlign: 'center', fontFamily: SANS, fontSize: 24, color: CLAUDE.INK_SOFT, opacity: remap(p, 0.78, 0.88, 0, 1) }}>
+        <div style={{ position: 'absolute', bottom: 92, left: 0, right: 0, textAlign: 'center', fontFamily: SANS, fontSize: 24, color: CLAUDE.INK_SOFT, opacity: remap(p, captionAt, captionAt + 0.10, 0, 1) }}>
           {caption}
         </div>
       )}

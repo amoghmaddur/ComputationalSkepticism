@@ -1,6 +1,6 @@
 # TYPECHECK.md — GATE T
 
-Reel: `claude-liam-descartes-doubt`  |  Checked: 2026-09-25T17:56  |  Overall: PASS  |  Beats checked: 14  |  FAILs: 0
+Reel: `claude-liam-descartes-doubt`  |  Checked: 2026-09-28T19:16  |  Overall: PASS  |  Beats checked: 14  |  FAILs: 0
 
 Spec: `skills/make/kerning/reference/type-spec.md` §8.  Floor: 1.9% frame-height.  Contrast: 4.5:1 WCAG.  Kern threshold: 3.5× expected advance.  Wordy budget: 2 elements.
 

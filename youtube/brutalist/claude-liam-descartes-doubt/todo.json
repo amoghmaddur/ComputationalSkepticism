@@ -31,7 +31,7 @@
     "one_idea": "Radical doubt is not a mood about a claim. It is a question that converts a claim into a list of conditions somebody can check \u2014 and it matters most when the output looks right.",
     "tts_note": "Every figure is written as words; no letter-by-letter sequences. \"Day-cart\" is a phonetic respelling used in narration_text ONLY (am_onyx says \"Discard's\" for the correct spelling). Never on screen. See VOICE-QA.md.",
     "build": {
-      "at": "2026-09-25T17:54:30",
+      "at": "2026-09-28T19:14:02",
       "cut": "review",
       "filled": 14,
       "of": 14,
@@ -53,7 +53,7 @@
       "scene_hint": null,
       "prompt": null,
       "slot": "media/B00.mp4",
-      "label": "Shalom. This is Liam, a synthetic voice, in for Bear. Here's a question that is four hundred years o"
+      "label": "Shalom. This is Liam, a synthetic voice, in for Bear. Here's a question that is nearly four hundred "
     },
     {
       "beat_id": "B01",

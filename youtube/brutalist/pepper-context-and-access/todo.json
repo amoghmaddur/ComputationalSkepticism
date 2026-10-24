@@ -1,0 +1,210 @@
+{
+  "video": "pepper-context-and-access",
+  "metadata": {
+    "title": "What It Had to Guess",
+    "slug": "pepper-context-and-access",
+    "topic": "INFO 7375 \u00b7 FINAL PROJECT PITCH \u00b7 PEPPER",
+    "kind": "pitch",
+    "playlist": "Brutalist",
+    "brand": "portfolio-amogh",
+    "audience": "A hiring manager or engineer deciding whether the author can tell a verified claim from an unverified one",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_puck",
+    "voice_kokoro": "am_puck",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "Amogh Maddur",
+    "folderLabel": "@amoghmaddur",
+    "greeting": "Hello, Amogh",
+    "greeting_note": "The assignment requires narrating as myself and forbids the instructor's name, persona or credit line, so the toolkit's claude-liam persona, IN-FOR-BEAR LAW and the @NikBearBrown outro lock are deliberately not used. The voice is synthetic and B00 says so in its first breath.",
+    "source": "Pepper \u2014 The Personal AI Prompter, v0.3 (pepper-v0.3.zip): CHANGES.md, pepper-extension/README.md, PRIVACY.md, manifest.json, lib/core.js, pepper-tests/README.md, docs/LIVE-TEST-PROTOCOL.md. Alternatives read on their own pages, 10 Oct 2026: help.openai.com (ChatGPT Custom Instructions) and aiprm.com.",
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "one_idea": "A prompt is only as good as the context behind it, and the cost of missing context scales with how much the tool is allowed to do. Pepper's distinguishing move is that it shows you what it had to guess instead of inventing it \u2014 and the project is to verify, on the live sites, the one link its tests cannot see.",
+    "tts_note": "Every figure is written as words. 'Uh-mohg Muddoor' is a phonetic respelling used in narration_text ONLY: the literal spelling 'Maddur' phonemizes to /m\u02c8\u00e6dj\u028a\u0279/ ('MAD-yoor'), heard back by ASR as 'Madger'. The respelling gives /\u02c8\u028cm\u02c8o\u028a\u0261 m\u02c8\u028cd\u0254\u02d0\u0279/. Never on screen. 'AIPRM' is never spoken (no letter-by-letter sequences); it appears on screen only.",
+    "voice_note": "am_puck \u2014 the voice chosen by spectral-centroid measurement for the previous reel (2883 Hz vs am_onyx 1748 Hz) and already round-tripped clean through ASR. Reused because it has no known defects.",
+    "headroom_note": "Uniform \u22123.00 dB applied to every beat so the loudest peak sits at about \u22123 dBFS (the loudest beat was +0.0 dBFS). B06, B07 and B09 were regenerated afterwards with hold tails and given the same fixed \u22123.00 dB, so relative loudness is unchanged. Durations re-measured after every pass.",
+    "build": {
+      "at": "2026-10-10T11:08:40",
+      "cut": "review",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": [
+        "B13: palette=claude but the outro is 'PortfolioTitleOutro' \u2014 OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "transition": {
+      "type": "crossfade",
+      "duration": 0.45,
+      "style": "fade"
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 14,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "media/B00.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B00.mp4",
+      "label": "Hello. This is Uh-mohg Muddoor. The voice is synthetic; the claims are mine. You open an AI chat and"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "media/B01.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B01.mp4",
+      "label": "Here it is in one breath. Getting more from AI is not a wording problem. It is a context problem. Fi"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "media/B02.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B02.mp4",
+      "label": "Here is what Pepper does about it. You type the same rough request. Pepper turns it into a full prom"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "media/B03.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B03.mp4",
+      "label": "Now the argument. Missing context is not one bug with one size. Its cost scales with what the tool m"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "media/B04.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B04.mp4",
+      "label": "Here is the part that makes it more than a template. When the prompt needs a fact about you that Pep"
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "media/B05.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B05.mp4",
+      "label": "Why not use what already exists? Two of them, read this morning on their own pages. ChatGPT's custom"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "media/B06.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B06.mp4",
+      "label": "So what actually exists. The suite ran this morning, on this machine. Seventy-five unit tests, seven"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "media/B07.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B07.mp4",
+      "label": "Here is what could sink it, and it is not subtle. Every one of those checks ran against mock pages, "
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "media/B08.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B08.mp4",
+      "label": "And the one thing it will never do. Pepper will not press send. That is not a missing feature; it is"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "media/B09.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B09.mp4",
+      "label": "Now the part a pitch usually skips. Point the same question at my own claim. What would have to be t"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "media/B10.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B10.mp4",
+      "label": "So why this one? Half is showing off, and I will say which. I designed Pepper and directed the build"
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "media/B11.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B11.mp4",
+      "label": "So, the verdict, in two lists. Exists today: the extension, seventy-five passing tests, twenty-two s"
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "media/B12.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B12.mp4",
+      "label": "Your turn, and here is the prompt. Take the last tool you shipped. List every claim its README makes"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "media/B13.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/B13.mp4",
+      "label": "What it had to guess. Uh-mohg Muddoor, for INFO seven three seven five."
+    }
+  ]
+}

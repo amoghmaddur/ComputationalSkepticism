@@ -44,6 +44,12 @@ export const claudeComposerAskSchema = z.object({
   placeholder: z.string().default('Type / for skills'),
   animateTyping: z.boolean().optional(),
   largeText: z.boolean().optional(),
+  /** Optional timing as fractions of the beat, so typing and output land on
+   *  the narration. Omitted = the fixed frame timing used everywhere else. */
+  typeAt: z.number().optional(),
+  typeDur: z.number().optional(),
+  runAt: z.number().optional(),
+  outputAt: z.array(z.number()).optional(),
 });
 export type ClaudeComposerAskProps = z.infer<typeof claudeComposerAskSchema>;
 
@@ -51,9 +57,11 @@ export type ClaudeComposerAskProps = z.infer<typeof claudeComposerAskSchema>;
 export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
   command, topic, segment, greeting, runningText, output, folderLabel,
   modelLabel, effortLabel, placeholder, animateTyping = true, largeText = false,
+  typeAt, typeDur, runAt, outputAt,
 }) => {
   const frame = useCurrentFrame();
-  const {fps, width, height} = useVideoConfig();
+  const {fps, width, height, durationInFrames} = useVideoConfig();
+  const F = (f: number) => Math.round(f * durationInFrames);
   const portrait = height > width;
 
   const PAD_X = width * 0.08;
@@ -64,8 +72,8 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
   const segIn   = spring({frame: frame - 4, fps, config: SPRING_SMOOTH});
   const cardIn  = spring({frame: frame - 8, fps, config: SPRING_SMOOTH});
 
-  const TYPE_START = 18;
-  const TYPE_DUR   = 45;
+  const TYPE_START = typeAt !== undefined ? F(typeAt) : 18;
+  const TYPE_DUR   = typeDur !== undefined ? Math.max(6, F(typeDur)) : 45;
   const charsShown = !animateTyping ? command.length : Math.min(
     command.length,
     Math.max(0, Math.floor(((frame - TYPE_START) / TYPE_DUR) * command.length)),
@@ -77,7 +85,7 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
   const typed = command.slice(0, charsShown);
   const slashMatch = typed.match(/^(\/\S*)([\s\S]*)$/);
 
-  const RUN_START = TYPE_START + TYPE_DUR + 8;
+  const RUN_START = runAt !== undefined ? F(runAt) : TYPE_START + TYPE_DUR + 8;
   const runningOpacity = interpolate(frame, [RUN_START + 6, RUN_START + 12], [0, 1], {
     extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
   });
@@ -266,8 +274,11 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
 
         {/* Optional output lines */}
         {output && output.map((line, i) => {
-          const lineStart = RUN_START + 18 + i * 10;
-          const lineOpacity = interpolate(frame, [lineStart, lineStart + 6], [0, 1], {
+          const lineStart = outputAt?.[i] !== undefined ? F(outputAt[i]) : RUN_START + 18 + i * 10;
+          const lineOpacity = interpolate(frame, [lineStart, lineStart + 8], [0, 1], {
+            extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+          });
+          const lineRise = interpolate(frame, [lineStart, lineStart + 10], [6, 0], {
             extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
           });
           return (
@@ -279,6 +290,7 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
               whiteSpace: 'pre-wrap',
               overflowWrap: 'break-word',
               opacity: lineOpacity,
+              transform: `translateY(${lineRise}px)`,
             }}>
               {line}
             </div>

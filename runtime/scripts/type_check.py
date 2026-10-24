@@ -344,6 +344,11 @@ MANIM_MATH_CANVAS_PATTERNS: set[str] = set()
 # "medium-dark local background" around a "dark text blob" (the card background pixel cluster).
 # These are structural brand marks, not typography — §8.3b is inapplicable.
 DARK_BACKGROUND_MARK_PATTERNS = {
+    # PepperScreenshot: a REAL screenshot of a captured application (Pepper's panel, written by its
+    # own browser test). Its UI labels, dim-on-dark text and adjacent chips are image pixel content,
+    # not designed typography — fixing them would mean altering the evidence. The caption and spark
+    # line around the image are authored type at >= the floor. Same reasoning as GodotDesignFigure.
+    "PepperScreenshot",
     "GuidebookPage",    # B23 (online variant: DARK card with CREAM MonogramMark),
                         # B32 (contact variant: DARK left panel with CREAM SignatureMark)
     "MbgSocialCrops",   # B24 (DARK banner strip with CREAM SignatureMark)
@@ -363,6 +368,11 @@ DARK_BACKGROUND_MARK_PATTERNS = {
 # ~9-11× is below the 15× flat-bar filter → detected as a text blob → false overlap.
 # These are design-correct layouts, not real readability bugs.
 BBOX_OVERLAP_EXEMPT_PATTERNS = {
+    # PepperScreenshot: a REAL screenshot of a captured application (Pepper's panel, written by its
+    # own browser test). Its UI labels, dim-on-dark text and adjacent chips are image pixel content,
+    # not designed typography — fixing them would mean altering the evidence. The caption and spark
+    # line around the image are authored type at >= the floor. Same reasoning as GodotDesignFigure.
+    "PepperScreenshot",
     "B03_ClusterTopology",   # AICR tier cards: INK border frame ≠ text run; labels inside by design
     "B02_GPUNodeTable",      # AICR GPU node table: INK header box border ≠ text run; headers inside by design
     "B03_HookMechanism",     # simple-hooks: flow-diagram nodes (RoundedRectangle + interior label); design-correct
@@ -598,6 +608,11 @@ PROSE_PATTERNS = {"MedhavyConceptCard", "TwoColumnCard", "PredictCard",
 # claude register (see BANNED_PATTERNS_CLAUDE below). The standalone sketch-explainer
 # skill has its own lane; the ban only fires when metadata.channel is claude-register.
 HAND_DRAWN_PATTERNS = {
+    # PepperScreenshot: a REAL screenshot of a captured application (Pepper's panel, written by its
+    # own browser test). Its UI labels, dim-on-dark text and adjacent chips are image pixel content,
+    # not designed typography — fixing them would mean altering the evidence. The caption and spark
+    # line around the image are authored type at >= the floor. Same reasoning as GodotDesignFigure.
+    "PepperScreenshot",
     # GodotDesignFigure: a full-width figure slot that carries a real Godot engine capture
     # (HUD text at capture size) or a design diagram supplied by the reel. That text is image
     # pixel content, not designed typography; the chips/title/status around it stay checked.

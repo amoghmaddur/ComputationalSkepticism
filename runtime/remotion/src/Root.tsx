@@ -170,6 +170,15 @@ import {
   DescartesChecklist, descartesChecklistSchema,
   DescartesLedger, descartesLedgerSchema,
 } from './DescartesIllu';
+// ── pepper-context-and-access — context/access figures ──
+import {
+  PepperSixParts, pepperSixPartsSchema,
+  PepperAccessLadder, pepperAccessLadderSchema,
+  PepperAssumptions, pepperAssumptionsSchema,
+  PepperAlternatives, pepperAlternativesSchema,
+  PepperScreenshot, pepperScreenshotSchema,
+} from './PepperIllu';
+import {PortfolioTitleOutro, portfolioTitleOutroSchema} from './scenes/PortfolioTitleOutro';
 // ── claude-liam — math-of-being-afraid-together figures ──
 import {HorrorParadox, horrorParadoxSchema} from './scenes/HorrorParadox';
 import {HorrorAxiom, horrorAxiomSchema} from './scenes/HorrorAxiom';
@@ -2273,6 +2282,37 @@ export const RemotionRoot: React.FC = () => {
         calculateMetadata={beatMeta}
         schema={descartesLedgerSchema}
         defaultProps={descartesLedgerSchema.parse({})} />
+      {/* ── pepper-context-and-access — "What It Had to Guess" figures ── */}
+      <Composition id="PepperSixParts" component={PepperSixParts}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={pepperSixPartsSchema}
+        defaultProps={pepperSixPartsSchema.parse({})} />
+      <Composition id="PepperAccessLadder" component={PepperAccessLadder}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={pepperAccessLadderSchema}
+        defaultProps={pepperAccessLadderSchema.parse({})} />
+      <Composition id="PepperAssumptions" component={PepperAssumptions}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={pepperAssumptionsSchema}
+        defaultProps={pepperAssumptionsSchema.parse({})} />
+      <Composition id="PepperAlternatives" component={PepperAlternatives}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={pepperAlternativesSchema}
+        defaultProps={pepperAlternativesSchema.parse({})} />
+      <Composition id="PepperScreenshot" component={PepperScreenshot}
+        durationInFrames={900} fps={30} width={1280} height={720}
+        calculateMetadata={beatMeta}
+        schema={pepperScreenshotSchema}
+        defaultProps={pepperScreenshotSchema.parse({})} />
+      <Composition id="PortfolioTitleOutro" component={PortfolioTitleOutro}
+        durationInFrames={180} fps={30} width={1920} height={1080}
+        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 6) * 30)})}
+        schema={portfolioTitleOutroSchema}
+        defaultProps={portfolioTitleOutroSchema.parse({})} />
       <Composition id="ClaudeScienceChipGrid" component={ClaudeScienceChipGrid}
         durationInFrames={900} fps={30} width={1280} height={720}
         schema={claudeScienceChipGridSchema}

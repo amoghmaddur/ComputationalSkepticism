@@ -1,0 +1,23 @@
+[typecheck] wrote C:\dev\brutalist.art\youtube\brutalist\pepper-context-and-access\TYPECHECK.md
+[typecheck] §8.10 B00: SKIP
+[typecheck] §8.10 B01: SKIP
+[typecheck] §8.10 B02: SKIP
+[typecheck] §8.10 B03: SKIP
+[typecheck] §8.10 B04: SKIP
+[typecheck] §8.10 B05: SKIP
+[typecheck] §8.10 B06: SKIP
+[typecheck] §8.10 B07: SKIP
+[typecheck] §8.10 B08: SKIP
+[typecheck] §8.10 B09: SKIP
+[typecheck] §8.10 B10: SKIP
+[typecheck] §8.10 B11: 0.58
+[typecheck] §8.10 B12: SKIP
+[typecheck] §8.10 B13: SKIP
+[typecheck] GATE T: PASS
+[gate-v] frames=28 BLOCKER=0 MAJOR=0 → C:\dev\brutalist.art\youtube\brutalist\pepper-context-and-access\_qc\REPORT.md
+[art] transitions: fade crossfade 0.45s, each starting on the next beat's first audio frame (audio clock unchanged)
+[art] motion histogram: type-on:3  build:1  grow:1  camera:1  compare:1  ledger:1  correct:1  tick:1  protocol:1  split:1  artifact:1  poster:1
+[art] SKIN LINT: B13: palette=claude but the outro is 'PortfolioTitleOutro' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (14/14 filled)
+[art] wrote C:\dev\brutalist.art\renders\pepper-context-and-access.mp4  (237.0s, audio: per-beat timeline (source audio preserved), drawtext: yes)
+[art] slots: 14/14 filled — B00:VIDEO B01:VIDEO B02:VIDEO B03:VIDEO B04:VIDEO B05:VIDEO B06:VIDEO B07:VIDEO B08:VIDEO B09:VIDEO B10:VIDEO B11:VIDEO B12:VIDEO B13:VIDEO

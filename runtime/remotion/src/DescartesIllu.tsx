@@ -49,20 +49,35 @@ export const descartesProtocolSchema = z.object({
   /** Start fraction per condition, aligned to the narration. */
   conditionsAt: z.array(z.number()).default([]),
   footerAt: z.number().optional(),
+  /** When set, every numbered box appears at this fraction (as the count is
+   *  spoken) and each condition's text arrives on its own word. */
+  slotsAt: z.number().optional(),
+  /** When the claim and the question land. Omitted = 0.04 / 0.20. */
+  claimAt: z.number().optional(),
+  questionAt: z.number().optional(),
+  /** Opacity the claim holds before claimAt (e.g. 0.3); omitted = hidden until claimAt. */
+  claimPreview: z.number().optional(),
 });
 export type DescartesProtocolProps = z.infer<typeof descartesProtocolSchema>;
 
 export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
   const p = useP();
-  const claimIn = ease(remap(p, 0.04, 0.14, 0, 1));
-  const qIn = ease(remap(p, 0.20, 0.32, 0, 1));
+  const cA = p_.claimAt ?? 0.04;
+  const qA = p_.questionAt ?? 0.20;
+  const claimIn = ease(remap(p, cA, cA + 0.10, 0, 1));
+  const qIn = ease(remap(p, qA, qA + 0.10, 0, 1));
   const nC = p_.conditions.length;
   return (
     <AbsoluteFill style={{ background: STAGE }}>
       <div style={{
         position: 'absolute', left: SAFE_L, right: 1280 - SAFE_R, top: 128,
         textAlign: 'center', fontFamily: SERIF, fontSize: 78, color: INK,
-        opacity: claimIn, transform: `translateY(${(1 - claimIn) * 14}px)`,
+        // with claimPreview, the claim sits faint from the start (the pitch's own claim)
+        // and comes up to full strength on the word that names it
+        opacity: p_.claimPreview === undefined ? claimIn
+          : Math.max(ease(remap(p, 0.02, 0.08, 0, 1)) * p_.claimPreview, claimIn),
+        transform: `translateY(${(1 - (p_.claimPreview === undefined ? claimIn : 1)) * 14}px) scale(${
+          p_.claimPreview === undefined ? 1 : 1 + 0.04 * Math.sin(Math.PI * claimIn)})`,
       }}>{p_.claim}</div>
 
       <div style={{
@@ -72,8 +87,9 @@ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
       }}>{p_.question}</div>
 
       <div style={{
-        position: 'absolute', left: SAFE_L + 40, width: (SAFE_R - SAFE_L) - 80, top: 292,
-        height: 3, background: SPARK, opacity: 0.9 * qIn,
+        position: 'absolute', left: SAFE_L + 40 + ((SAFE_R - SAFE_L) - 80) * (1 - qIn) / 2,
+        width: ((SAFE_R - SAFE_L) - 80) * qIn, top: 292,
+        height: 3, background: SPARK, opacity: 0.9 * clamp(qIn * 2, 0, 1),
       }} />
 
       {p_.conditions.map((c, i) => {
@@ -81,11 +97,12 @@ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
         const gap = nC > 1 ? (0.72 - 0.34) / (nC - 1) : 0;
         const t0 = p_.conditionsAt[i] ?? (0.34 + i * gap);
         const ci = ease(remap(p, t0, t0 + 0.12, 0, 1));
+        const si = p_.slotsAt === undefined ? ci : ease(remap(p, p_.slotsAt, p_.slotsAt + 0.06, 0, 1));
         return (
           <div key={i} style={{
             position: 'absolute', left: SAFE_L + 30, width: (SAFE_R - SAFE_L) - 60,
             top: 336 + i * 98, display: 'flex', alignItems: 'center', gap: 22,
-            opacity: ci, transform: `translateX(${(1 - ci) * -18}px)`,
+            opacity: Math.max(ci, si), transform: `translateX(${(1 - si) * -18}px)`,
           }}>
             <div style={{
               width: 46, height: 46, flexShrink: 0,
@@ -93,7 +110,8 @@ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               fontFamily: SANS, fontSize: 24, fontWeight: 700, color: INK,
             }}>{i + 1}</div>
-            <div style={{ fontFamily: SERIF, fontSize: 40, color: INK, lineHeight: 1.2 }}>{c}</div>
+            <div style={{ fontFamily: SERIF, fontSize: 40, color: INK, lineHeight: 1.2, opacity: ci,
+              transform: `translateX(${(1 - ci) * -12}px)` }}>{c}</div>
           </div>
         );
       })}
@@ -140,16 +158,20 @@ export type DescartesSplitProps = z.infer<typeof descartesSplitSchema>;
 const Col: React.FC<{
   x: number; w: number; label: string; lines: string[]; reveal: number;
   accent?: boolean; dy?: number; strike?: number;
-}> = ({ x, w, label, lines, reveal, accent, dy = 0, strike = 0 }) => (
+  side?: number;
+}> = ({ x, w, label, lines, reveal, accent, dy = 0, strike = 0, side = 0 }) => (
   <>
     <div style={{
       position: 'absolute', left: x, width: w, top: 138 + dy,
-      fontFamily: SANS, fontSize: 40, fontWeight: 700, letterSpacing: 2,
-      color: accent ? INK : SOFT, opacity: reveal > 0 ? 1 : 0,
+      // one line, always: a heading that wraps gets cut in half by the rule below it
+      fontFamily: SANS, fontSize: Math.min(40, Math.floor(w / Math.max(1, label.length) / 0.70)),
+      fontWeight: 700, letterSpacing: 2, whiteSpace: 'nowrap',
+      color: accent ? INK : SOFT, opacity: clamp(reveal * 4, 0, 1),
+      transform: `translateX(${side * (1 - clamp(reveal * 3, 0, 1)) * 18}px)`,
     }}>{label}</div>
     <div style={{
-      position: 'absolute', left: x, width: w, top: 194 + dy, height: 3,
-      background: accent ? SPARK : INK, opacity: 0.8 * clamp(reveal * 3, 0, 1),
+      position: 'absolute', left: x, width: w * clamp(reveal * 3, 0, 1), top: 194 + dy, height: 3,
+      background: accent ? SPARK : INK, opacity: 0.8,
     }} />
     {lines.map((l, i) => {
       const li = ease(remap(reveal, i * 0.26, i * 0.26 + 0.34, 0, 1));
@@ -198,13 +220,13 @@ export const DescartesSplit: React.FC<DescartesSplitProps> = (p_) => {
           opacity: introIn, transform: `translateY(${(1 - introIn) * 10}px)`,
         }}>{p_.intro}</div>
       )}
-      <Col x={SAFE_L} w={colW} label={p_.leftLabel} lines={p_.leftLines} reveal={lRev} dy={dy}
+      <Col x={SAFE_L} w={colW} label={p_.leftLabel} lines={p_.leftLines} reveal={lRev} dy={dy} side={-1}
            strike={p_.strikeLeft ? ease(remap(p, rA + 0.04, gA, 0, 1)) : 0} />
       <div style={{
-        position: 'absolute', left: 640, top: 132 + dy, width: 2, height: 430 - dy,
-        background: INK, opacity: 0.22 * clamp(lRev * 3, 0, 1),
+        position: 'absolute', left: 640, top: 132 + dy, width: 2, height: (430 - dy) * clamp(lRev * 2, 0, 1),
+        background: INK, opacity: 0.22,
       }} />
-      <Col x={SAFE_R - colW} w={colW} label={p_.rightLabel} lines={p_.rightLines} reveal={rRev} accent dy={dy} />
+      <Col x={SAFE_R - colW} w={colW} label={p_.rightLabel} lines={p_.rightLines} reveal={rRev} accent dy={dy} side={1} />
       {p_.gapLine && (
         <div style={{
           position: 'absolute', left: SAFE_L, right: 1280 - SAFE_R, top: 604,
@@ -231,6 +253,16 @@ export const descartesCorrectionSchema = z.object({
   /** Start fraction per column, aligned to the narration. */
   partsAt: z.array(z.number()).default([]),
   afterAt: z.number().optional(),
+  /** Verbatim evidence for WHY the claim fails, shown where the parts will
+   *  land, from evidenceAt until the first part arrives. */
+  evidence: z.array(z.object({ src: z.string(), code: z.string() })).default([]),
+  evidenceAt: z.number().optional(),
+  evidenceNote: z.string().default(''),
+  /** Strike line [left, width] in stage px — sized to the claim it strikes. */
+  strikeSpan: z.array(z.number()).length(2).optional(),
+  /** Set the struck claim in INK instead of SOFT — keeps glyph contrast where
+   *  the strike crosses it, and suits a claim whose first half is true. */
+  beforeInk: z.boolean().default(false),
 });
 export type DescartesCorrectionProps = z.infer<typeof descartesCorrectionSchema>;
 
@@ -243,16 +275,37 @@ export const DescartesCorrection: React.FC<DescartesCorrectionProps> = (p_) => {
       <div style={{
         position: 'absolute', left: SAFE_L, right: 1280 - SAFE_R, top: 132,
         textAlign: 'center', fontFamily: SERIF, fontSize: 60,
-        color: SOFT, opacity: inB,
+        color: p_.beforeInk ? INK : SOFT, opacity: inB,
       }}>{p_.before}</div>
       <div style={{
-        position: 'absolute', left: 300, top: 168,
-        width: strike * 680, height: 4, background: SPARK,
+        position: 'absolute', left: p_.strikeSpan?.[0] ?? 300, top: 168,
+        width: strike * (p_.strikeSpan?.[1] ?? 680), height: 4, background: SPARK,
       }} />
       <div style={{
         position: 'absolute', left: 0, right: 0, top: 214, textAlign: 'center',
         fontFamily: SANS, fontSize: 36, color: SOFT, opacity: strike,
       }}>{p_.beforeNote}</div>
+
+      {p_.evidence.length > 0 && (() => {
+        const e0 = p_.evidenceAt ?? 0.28;
+        const e1 = p_.partsAt[0] ?? 0.42;
+        const eo = ease(remap(p, e0, e0 + 0.07, 0, 1)) * (1 - ease(remap(p, e1 - 0.05, e1, 0, 1)));
+        return (
+          <div style={{ position: 'absolute', left: SAFE_L, width: SAFE_R - SAFE_L, top: 300, opacity: eo }}>
+            {p_.evidence.map((ev, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 28, marginBottom: 40,
+                opacity: ease(remap(p, e0 + i * 0.05, e0 + i * 0.05 + 0.07, 0, 1)) }}>
+                <div style={{ width: 300, flexShrink: 0, textAlign: 'right', fontFamily: SANS, fontSize: 28, color: SOFT }}>{ev.src}</div>
+                <div style={{ fontFamily: MONO, fontSize: 36, color: INK }}>{ev.code}</div>
+              </div>
+            ))}
+            {p_.evidenceNote && (
+              <div style={{ marginTop: 44, textAlign: 'center', fontFamily: SERIF, fontSize: 36, color: INK,
+                opacity: ease(remap(p, e0 + 0.10, e0 + 0.17, 0, 1)) }}>{p_.evidenceNote}</div>
+            )}
+          </div>
+        );
+      })()}
 
       {p_.parts.map((pt, i) => {
         const t0 = p_.partsAt[i] ?? (0.42 + i * 0.16);
@@ -267,7 +320,7 @@ export const DescartesCorrection: React.FC<DescartesCorrectionProps> = (p_) => {
               fontFamily: SANS, fontSize: 44, fontWeight: 700, letterSpacing: 2,
               color: SPARK, marginBottom: 14,
             }}>{pt.k.toUpperCase()}</div>
-            <div style={{ width: '100%', height: 3, background: INK, opacity: 0.75, marginBottom: 16 }} />
+            <div style={{ width: `${pi * 100}%`, height: 3, background: INK, opacity: 0.75, marginBottom: 16 }} />
             {/* pre-line so the authored line breaks in the value actually land */}
             <div style={{ fontFamily: MONO, fontSize: 31, color: INK, lineHeight: 1.4, whiteSpace: 'pre-line' }}>{pt.v}</div>
           </div>
@@ -392,6 +445,13 @@ export const descartesLedgerSchema = z.object({
   source: z.string().default(''),
   /** Start fraction per row, aligned to the spoken figure. */
   rowsAt: z.array(z.number()).default([]),
+  /** Roll whole counts up to their value. Off when a mid-roll frame would
+   *  read as a different, false result ("37 of 75 pass"). */
+  count: z.boolean().default(true),
+  /** When the source line appears. Provenance can sit on screen from the start. */
+  sourceAt: z.number().optional(),
+  /** Vertical step between rows, in stage px. */
+  rowGap: z.number().default(62),
 });
 export type DescartesLedgerProps = z.infer<typeof descartesLedgerSchema>;
 
@@ -415,7 +475,7 @@ export const DescartesLedger: React.FC<DescartesLedgerProps> = (p_) => {
         const cnt = ease(remap(p, t0, t0 + 0.22, 0, 1));
         return (
           <div key={i} style={{
-            position: 'absolute', left: SAFE_L, width: SAFE_R - SAFE_L, top: 214 + i * 62,
+            position: 'absolute', left: SAFE_L, width: SAFE_R - SAFE_L, top: 214 + i * p_.rowGap,
             display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
             opacity: s, transform: `translateY(${(1 - s) * 10}px)`,
           }}>
@@ -423,7 +483,10 @@ export const DescartesLedger: React.FC<DescartesLedgerProps> = (p_) => {
             <div style={{
               fontFamily: MONO, fontSize: 36, fontWeight: 600,
               color: r.damning ? SPARK : INK,
-            }}>{countUp(r.value, cnt)}</div>
+              transform: `translateX(${(1 - s) * 24}px) scale(${r.damning
+                ? 1 + 0.18 * Math.sin(Math.PI * clamp(remap(p, t0 + 0.04, t0 + 0.14, 0, 1), 0, 1)) : 1})`,
+              transformOrigin: 'right center',
+            }}>{p_.count ? countUp(r.value, cnt) : r.value}</div>
           </div>
         );
       })}
@@ -438,7 +501,7 @@ export const DescartesLedger: React.FC<DescartesLedgerProps> = (p_) => {
         <div style={{
           position: 'absolute', left: 0, right: 0, bottom: 34, textAlign: 'center',
           fontFamily: SANS, fontSize: 28, color: SOFT,
-          opacity: ease(remap(p, 0.90, 0.98, 0, 1)),
+          opacity: ease(remap(p, p_.sourceAt ?? 0.90, (p_.sourceAt ?? 0.90) + 0.08, 0, 1)),
         }}>{p_.source}</div>
       )}
       <SparkLine text={p_.sparkLine} />

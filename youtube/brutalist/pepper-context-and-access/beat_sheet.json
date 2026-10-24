@@ -1,0 +1,1171 @@
+{
+  "metadata": {
+    "title": "What It Had to Guess",
+    "slug": "pepper-context-and-access",
+    "topic": "INFO 7375 · FINAL PROJECT PITCH · PEPPER",
+    "kind": "pitch",
+    "playlist": "Brutalist",
+    "brand": "portfolio-amogh",
+    "audience": "A hiring manager or engineer deciding whether the author can tell a verified claim from an unverified one",
+    "register": "Teardown",
+    "engine": "kokoro",
+    "voice": "am_puck",
+    "voice_kokoro": "am_puck",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "fit": "contain",
+    "captions": false,
+    "channel": "Amogh Maddur",
+    "folderLabel": "@amoghmaddur",
+    "greeting": "Hello, Amogh",
+    "greeting_note": "The assignment requires narrating as myself and forbids the instructor's name, persona or credit line, so the toolkit's claude-liam persona, IN-FOR-BEAR LAW and the @NikBearBrown outro lock are deliberately not used. The voice is synthetic and B00 says so in its first breath.",
+    "source": "Pepper — The Personal AI Prompter, v0.3 (pepper-v0.3.zip): CHANGES.md, pepper-extension/README.md, PRIVACY.md, manifest.json, lib/core.js, pepper-tests/README.md, docs/LIVE-TEST-PROTOCOL.md. Alternatives read on their own pages, 10 Oct 2026: help.openai.com (ChatGPT Custom Instructions) and aiprm.com.",
+    "typography": {
+      "serif": "Tiempos/EB Garamond",
+      "ui": "system sans",
+      "mono": "SF Mono"
+    },
+    "one_idea": "A prompt is only as good as the context behind it, and the cost of missing context scales with how much the tool is allowed to do. Pepper's distinguishing move is that it shows you what it had to guess instead of inventing it — and the project is to verify, on the live sites, the one link its tests cannot see.",
+    "tts_note": "Every figure is written as words. 'Uh-mohg Muddoor' is a phonetic respelling used in narration_text ONLY: the literal spelling 'Maddur' phonemizes to /mˈædjʊɹ/ ('MAD-yoor'), heard back by ASR as 'Madger'. The respelling gives /ˈʌmˈoʊɡ mˈʌdɔːɹ/. Never on screen. 'AIPRM' is never spoken (no letter-by-letter sequences); it appears on screen only.",
+    "voice_note": "am_puck — the voice chosen by spectral-centroid measurement for the previous reel (2883 Hz vs am_onyx 1748 Hz) and already round-tripped clean through ASR. Reused because it has no known defects.",
+    "headroom_note": "Uniform −3.00 dB applied to every beat so the loudest peak sits at about −3 dBFS (the loudest beat was +0.0 dBFS). B06, B07 and B09 were regenerated afterwards with hold tails and given the same fixed −3.00 dB, so relative loudness is unchanged. Durations re-measured after every pass.",
+    "build": {
+      "at": "2026-10-14T17:08:04",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": [
+        "B13: palette=claude but the outro is 'PortfolioTitleOutro' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "transition": {
+      "type": "crossfade",
+      "duration": 0.45,
+      "style": "fade"
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "role_note": "COLD OPEN LAW — opens on the composer, ask lands answered. Leads with the PROBLEM a user hits in real use, not with test output (testing moved to B06). HONESTY: the composer is a reconstructed UI and NO MODEL WAS RUN — the chip says so. The three lines under it are not a reply; they are labelled 'missing:' annotations of what the request leaves out, read aloud as they appear. Narrated as myself; the voice declares itself synthetic in the first breath.",
+      "narration_text": "Hello. This is Uh-mohg Muddoor. The voice is synthetic; the claims are mine. You open an AI chat and type: help me write a cover letter. It doesn't know who you are, what the job is, or what to avoid. So it has to guess. Tomorrow you'll type that background again, or set it up separately on every site you use.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 15,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "ask",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.02",
+            "event": "composer fades in; chip reads RECONSTRUCTED UI · NO MODEL WAS RUN"
+          },
+          {
+            "at": "0.06",
+            "event": "greeting 'Hello, Amogh' above the composer"
+          },
+          {
+            "at": "0.40",
+            "event": "'help me write a cover letter' types in as it is spoken"
+          },
+          {
+            "at": "0.55",
+            "event": "'what this request leaves out:' appears beneath"
+          },
+          {
+            "at": "0.58",
+            "event": "missing: who you are — missing: what the job is — missing: what to avoid, each on its word"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hello, Amogh",
+            "topic": "RECONSTRUCTED UI · NO MODEL WAS RUN",
+            "segment": "the problem",
+            "command": "help me write a cover letter",
+            "runningText": "what this request leaves out:",
+            "output": [
+              "missing: who you are",
+              "missing: what the job is",
+              "missing: what to avoid"
+            ],
+            "folderLabel": "@amoghmaddur",
+            "modelLabel": "AI chat",
+            "effortLabel": "any site",
+            "largeText": true,
+            "typeAt": 0.343,
+            "typeDur": 0.054,
+            "runAt": 0.416,
+            "outputAt": [
+              0.446,
+              0.486,
+              0.547
+            ],
+            "placeholder": "Ask anything"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-10T15:03:50.463548+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.33,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 17.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B00.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "role_note": "EXECUTIVE-SUMMARY LAW — whole idea in one breath, written in front of the viewer. The correction IS the misconception this film dismantles: that getting more from AI is about phrasing. Single-word triggers because the component matches per whitespace token. Both triggers are corrected so no wrong fragment survives: final text reads 'Getting more from AI / is a context problem. / Fix the background, / fix the answer.'",
+      "narration_text": "Here it is in one breath. Getting more from AI is not a wording problem. It is a context problem. Fix the background, and you fix the answer. And the more a tool is allowed to do, the more the missing background costs.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 12,
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "card",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.06",
+            "event": "the writer types 'Getting more from AI / is a wording problem.' — 'wording' stands in terracotta"
+          },
+          {
+            "at": "0.30",
+            "event": "'wording' deletes; 'context' types in its place"
+          },
+          {
+            "at": "0.50",
+            "event": "'Fix the words,' types; 'words' marks terracotta and becomes 'background'"
+          },
+          {
+            "at": "0.86",
+            "event": "the corrected overview holds: a context problem; fix the background, fix the answer"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Getting more from AI\nis a wording problem.\nFix the words,\nfix the answer.",
+            "triggerWords": "wording, words",
+            "replacementWords": "context, background",
+            "seed": "pepper-b01",
+            "face": "serif",
+            "fontSize": 165,
+            "lineSpacing": 1.38,
+            "align": "center",
+            "charMs": 30,
+            "jitter": 18,
+            "mistakeRate": 0,
+            "hesitateWithin": 0,
+            "hesitateBetween": 0
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-10T14:30:22.542069+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 14.186,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.208333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "USE",
+      "role_note": "Q1 — what it is, as a user meets it. The six slots are the six parts Pepper's panel shows; each lands as its plain-language description is spoken. 'What you've already told it' = the profile questions, answered once and kept in the browser. The footer names the five sites it is BUILT for — not 'works on': it has only been tested on mock pages of them. Implementation detail (lib/core.js) was removed from this beat.",
+      "narration_text": "Here is what Pepper does about it. You type the same rough request. Pepper turns it into a full prompt, using what you've already told it: who the AI should be, the background it can't guess, what to write, the rules, the layout, and what done looks like. It drops that in the box. You press send.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 17,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "build",
+        "show": [
+          {
+            "at": "0.20",
+            "event": "the rough request lands in mono: \"help me write a cover letter\""
+          },
+          {
+            "at": "0.28",
+            "event": "on 'a full prompt', six numbered empty slots appear under a terracotta rule"
+          },
+          {
+            "at": "0.45",
+            "event": "each slot fills as its plain description is spoken — role, context, task, constraints, format, success"
+          },
+          {
+            "at": "0.78",
+            "event": "footer: built for ChatGPT, Claude, Gemini, Perplexity and Copilot"
+          }
+        ],
+        "remotion": {
+          "pattern": "PepperSixParts",
+          "props": {
+            "sparkLine": "Your context, built in.",
+            "rough": "help me write a cover letter",
+            "roughLabel": "WHAT YOU TYPE",
+            "parts": [
+              {
+                "k": "ROLE",
+                "v": "tells the AI who to be"
+              },
+              {
+                "k": "CONTEXT",
+                "v": "the background it can't guess"
+              },
+              {
+                "k": "TASK",
+                "v": "exactly what to produce"
+              },
+              {
+                "k": "CONSTRAINTS",
+                "v": "the rules the answer must follow"
+              },
+              {
+                "k": "OUTPUT FORMAT",
+                "v": "how the answer is laid out"
+              },
+              {
+                "k": "SUCCESS CRITERIA",
+                "v": "how to judge that it's done"
+              }
+            ],
+            "partsAt": [
+              0.425,
+              0.498,
+              0.582,
+              0.622,
+              0.658,
+              0.7
+            ],
+            "footer": "Built for ChatGPT, Claude, Gemini, Perplexity and Copilot.",
+            "footerAt": 0.803,
+            "roughAt": 0.092,
+            "slotsAt": 0.284
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-10-10T14:31:29.895327+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 16.14,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 16.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B02.mp4",
+        "filled_by": "remotion:PepperSixParts",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "ARGUMENT",
+      "role_note": "The thesis the author set: context matters more the more access an AI has. HONESTY: the bar widths are illustrative, not measured, and the footer says so on screen — the ORDERING is the claim. The stop rung is Pepper's actual boundary (insertIntoSite clicks nothing). The stop rule is drawn BELOW rung 2 — Pepper fills the box and stops before sending. It was first drawn above rung 2, which read as the opposite.",
+      "narration_text": "Now the argument. Missing context is not one bug with one size. Its cost scales with what the tool may do. A tool that only reads your typing gets you a worse paragraph. A tool that sends for you gets you an answer you never checked. A tool that can act on your account gets you something you cannot undo. Pepper stops at the second rung, on purpose.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "grow",
+        "show": [
+          {
+            "at": "0.04",
+            "event": "axis label: COST OF THE CONTEXT IT DID NOT HAVE"
+          },
+          {
+            "at": "0.20",
+            "event": "on \"its cost scales\", all four rungs show faint; each comes up, with its bar, as it is named"
+          },
+          {
+            "at": "0.33",
+            "event": "rung 1 — reads what you typed — a short ink bar"
+          },
+          {
+            "at": "0.49",
+            "event": "rung 3 — sends on your behalf — a longer bar"
+          },
+          {
+            "at": "0.66",
+            "event": "rung 4 — acts on your account — the bar runs to the edge"
+          },
+          {
+            "at": "0.83",
+            "event": "rung 2 lands last, on 'Pepper stops': fills in the prompt box — terracotta bar, and a hard ink rule BELOW it, between filling the box and sending"
+          },
+          {
+            "at": "0.44",
+            "event": "footer, held from here to the cut: illustrative; the ordering is the claim, the widths are not measured"
+          }
+        ],
+        "remotion": {
+          "pattern": "PepperAccessLadder",
+          "props": {
+            "sparkLine": "Access raises the stakes.",
+            "axisLabel": "COST OF THE CONTEXT IT DID NOT HAVE",
+            "rungs": [
+              {
+                "label": "Reads what you typed",
+                "note": "suggests words",
+                "cost": 0.12
+              },
+              {
+                "label": "Fills in the prompt box",
+                "note": "you read it, you press send",
+                "cost": 0.28,
+                "stop": true
+              },
+              {
+                "label": "Sends on your behalf",
+                "note": "you read the answer afterwards",
+                "cost": 0.6
+              },
+              {
+                "label": "Acts on your account",
+                "note": "mail, files, money",
+                "cost": 1.0
+              }
+            ],
+            "rungsAt": [
+              0.325,
+              0.829,
+              0.494,
+              0.658
+            ],
+            "footer": "Illustrative. The ordering is the claim; the widths are not measured.",
+            "footerAt": 0.44,
+            "slotsAt": 0.205
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-10-10T15:05:15.465871+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.355,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 18.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B03.mp4",
+        "filled_by": "remotion:PepperAccessLadder",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "DIFFERENCE",
+      "role_note": "Q2 core — the distinguishing feature, shown on a REAL screenshot: panel-result-model.png, written by Pepper's own browser test (browser.test.js) when I re-ran the suite on this machine on 10 Oct 2026 (Chrome for Testing 156.0.8078.4, 20/20 checks passing). SHA-256 770d5303…60ad, copied byte-identical; kept in pepper-tests/e2e/shots-2026-10-10/. The package's own 2 Oct copy is unchanged in shots/. It shows the panel on the suite's MOCK ChatGPT page (the page header reads 'ChatGPT (mock)'), rendering the test's MOCKED model reply, with SYNTHETIC fixture data from browser.test.js ('Stripe new-grad SWE role', resume.txt). The caption says all of this on screen. The 'I am applying for roles in the United States.' line is the same example as buildSystemPrompt in lib/core.js. The camera only moves and a ring is drawn outside the image's own UI; no pixel is altered.",
+      "narration_text": "Here is the part that makes it more than a template. When the prompt needs a fact about you that Pepper does not have, it is not allowed to invent one. Facts may come only from your stored profile, memories and files. Anything else lands in this box, outside the prompt, until you add it yourself. Missing context is shown, not filled.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "camera",
+        "show": [
+          {
+            "at": "0.00",
+            "event": "the real screenshot opens wide: the mock ChatGPT page and Pepper's panel"
+          },
+          {
+            "at": "0.15",
+            "event": "camera moves onto the panel's labelled sections — Role, Context, Task, Constraints, Output format"
+          },
+          {
+            "at": "0.62",
+            "event": "camera moves to the 'Pepper assumed these' box; a terracotta ring draws around it"
+          },
+          {
+            "at": "0.78",
+            "event": "the ring moves to 'Add to prompt' as 'add it yourself' is spoken"
+          },
+          {
+            "at": "0.88",
+            "event": "camera pulls back to the whole panel: prompt above, guesses held outside, Insert below"
+          }
+        ],
+        "remotion": {
+          "pattern": "PepperScreenshot",
+          "props": {
+            "sparkLine": "What it had to guess.",
+            "src": "pepper/panel-result-model-2026-10-10.png",
+            "imgW": 1280,
+            "imgH": 860,
+            "shots": [
+              {
+                "at": 0.0,
+                "rect": {
+                  "x": 240,
+                  "y": 30,
+                  "w": 1030,
+                  "h": 760
+                }
+              },
+              {
+                "at": 0.124,
+                "rect": {
+                  "x": 850,
+                  "y": 190,
+                  "w": 404,
+                  "h": 312
+                }
+              },
+              {
+                "at": 0.611,
+                "rect": {
+                  "x": 850,
+                  "y": 528,
+                  "w": 404,
+                  "h": 150
+                }
+              },
+              {
+                "at": 0.826,
+                "rect": {
+                  "x": 843,
+                  "y": 90,
+                  "w": 419,
+                  "h": 688
+                }
+              }
+            ],
+            "rings": [
+              {
+                "at": 0.651,
+                "until": 0.751,
+                "rect": {
+                  "x": 859,
+                  "y": 534,
+                  "w": 386,
+                  "h": 132
+                }
+              },
+              {
+                "at": 0.771,
+                "rect": {
+                  "x": 874,
+                  "y": 647,
+                  "w": 96,
+                  "h": 26
+                }
+              }
+            ],
+            "caption": "Real screenshot · Pepper's browser test, 10 Oct 2026 · mock page, mocked model, synthetic data"
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-10-10T14:34:27.961303+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.74,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 17.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B04.mp4",
+        "filled_by": "remotion:PepperScreenshot",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "ALTERNATIVES",
+      "role_note": "Q2 — two real alternatives, read on their own pages on 10 Oct 2026. Quotes are verbatim from help.openai.com and aiprm.com. AIPRM is never spoken (TTS); it is named on screen. HONESTY: the footer states they were read, not installed and run.",
+      "narration_text": "Why not use what already exists? Two of them, read this morning on their own pages. ChatGPT's custom instructions: standing text, applied to every chat, one site, kept on your account. Second, a prompt-library extension with five thousand four hundred templates that somebody else wrote. Both are real, and both are useful. Neither one tells you what it had to guess.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "compare",
+        "show": [
+          {
+            "at": "0.22",
+            "event": "column 1 — ChatGPT Custom Instructions, its own words: \"applied immediately to all chats\""
+          },
+          {
+            "at": "0.38",
+            "event": "its gap line drops under a rule: one site, standing text"
+          },
+          {
+            "at": "0.49",
+            "event": "column 2 — AIPRM, its own words: \"a community-driven prompt library\" — 5,400+ prompts"
+          },
+          {
+            "at": "0.68",
+            "event": "its gap line: somebody else's template"
+          },
+          {
+            "at": "0.75",
+            "event": "column 3 — Pepper; its gap line is the only terracotta: tells you what it had to guess"
+          },
+          {
+            "at": "0.08",
+            "event": "footer, from 'I read two' to the cut: both read on their own pages — not installed and run"
+          }
+        ],
+        "remotion": {
+          "pattern": "PepperAlternatives",
+          "props": {
+            "sparkLine": "Two real alternatives.",
+            "columns": [
+              {
+                "name": "ChatGPT Custom Instructions",
+                "source": "help.openai.com, 10 Oct 2026",
+                "quote": "“Your custom instructions are applied immediately to all chats.”",
+                "gap": "One site. Standing text, not composed into this request."
+              },
+              {
+                "name": "AIPRM",
+                "source": "aiprm.com, 10 Oct 2026",
+                "quote": "“a community-driven prompt library” — 5,400+ prompts",
+                "gap": "Somebody else's template. Your context is still yours to type."
+              },
+              {
+                "name": "Pepper",
+                "source": "this project",
+                "quote": "Your stored context, composed into this one request.",
+                "gap": "Tells you what it had to guess.",
+                "mine": true
+              }
+            ],
+            "columnsAt": [
+              0.21,
+              0.504,
+              0.745
+            ],
+            "footer": "Both read on their own pages, 10 Oct 2026. Neither was installed and run.",
+            "footerAt": 0.084,
+            "gapsAt": [
+              0.375,
+              0.673,
+              0.856
+            ]
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-10-10T14:35:52.997916+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.33,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 18.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B05.mp4",
+        "filled_by": "remotion:PepperAlternatives",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "EVIDENCE",
+      "role_note": "What exists today, as numbers I can show. BOTH suites were run on this machine on 10 Oct 2026: unit 75/75 (Node v24.13.0, 6.4 s) and browser 20/20 (Chrome for Testing 156.0.8078.4, 70.3 s; Node reports 22 = two parent groups of 7 and 13 checks). The browser checks run against LOCAL MOCK PAGES and the row label says so. 22 = PNGs in the package's e2e/shots (the package's 26 PNGs include four icons; first drafted as 26 and caught). count:false — a rolling '37 of 75' frame would be a false result on screen. The zero is the damning row. The header names BOTH commands that ran; it first named only the unit-test command, above a browser row it did not produce.",
+      "narration_text": "So what actually exists. The suite ran this morning, on this machine. Seventy-five unit tests, seventy-five passing, in about six seconds. Twenty browser checks, re-run today, all passing. Twenty-two screenshots that suite produced. And one more number, the one nobody puts in bold: how many live sites any of it has touched.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "ledger",
+        "show": [
+          {
+            "at": "0.04",
+            "event": "the command lands as the ledger's header: node --test unit/*.test.js"
+          },
+          {
+            "at": "0.19",
+            "event": "row: unit tests, run 10 Oct 2026 — 75 of 75"
+          },
+          {
+            "at": "0.40",
+            "event": "row: browser checks, mock pages — 20 of 20"
+          },
+          {
+            "at": "0.53",
+            "event": "row: screenshots produced — 22"
+          },
+          {
+            "at": "0.72",
+            "event": "row: live sites touched — 0, in terracotta"
+          },
+          {
+            "at": "0.86",
+            "event": "closing line: the suite is green, and it has never seen a live site"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesLedger",
+          "props": {
+            "sparkLine": "Green is not live.",
+            "claim": "$ node --test unit/*.test.js · npm run test:browser",
+            "rows": [
+              {
+                "label": "Unit tests, run 10 Oct 2026",
+                "value": "75 of 75"
+              },
+              {
+                "label": "Browser checks, on mock pages",
+                "value": "20 of 20"
+              },
+              {
+                "label": "Screenshots the suite produced",
+                "value": "22"
+              },
+              {
+                "label": "Live sites touched by any test",
+                "value": "0",
+                "damning": true
+              }
+            ],
+            "rowsAt": [
+              0.189,
+              0.382,
+              0.533,
+              0.72
+            ],
+            "count": false,
+            "closing": "The suite is green. It has never seen a live site.",
+            "source": "pepper-tests/ · both suites run 10 Oct 2026 · Node v24.13.0 · Chrome for Testing 156",
+            "sourceAt": 0.06,
+            "rowGap": 84
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-10-10T15:06:40.758367+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 18.59,
+      "audio_file": "mp3/beat-B06.mp3",
+      "trail_silence_s": 1.2,
+      "render_duration_s": 18.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B06.mp4",
+        "filled_by": "remotion:DescartesLedger",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "RISK",
+      "role_note": "Q6 — the one concrete risk and its mitigation. 'best-effort … MUST be re-verified' is verbatim from the comment above SITES in lib/core.js. The 99% threshold is the project's own N4 condition. The 'after' sentence deliberately contains BLANKS, not a number: no result has been measured, so none is shown. The evidence rows are verbatim: SITES[chatgpt].input in lib/core.js and the ChatGPT mock in pepper-tests/e2e/mock-sites.js line 42. The strike covers ONLY 'so insertion works': '75 tests pass' is true — the unsupported part is the inference. It first struck the whole sentence, which would have struck a true claim.",
+      "narration_text": "Here is what could sink it, and it is not subtle. Every one of those checks ran against mock pages, and the mocks were built from Pepper's own selectors. So the tests cannot catch a wrong selector. They are made of it. The fix is a measurement: twenty inserts per live site, against the project's own bar of ninety-nine percent, re-run every Chrome release.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 20,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "correct",
+        "show": [
+          {
+            "at": "0.05",
+            "event": "the claim lands: “75 tests pass, so insertion works.” — a terracotta line strikes only 'so insertion works'; note beneath: green against a copy of its own assumptions"
+          },
+          {
+            "at": "0.23",
+            "event": "verbatim evidence: lib/core.js says the ChatGPT box is #prompt-textarea, and the mock page is built with id=\"prompt-textarea\""
+          },
+          {
+            "at": "0.57",
+            "event": "MEASURE: inserts per live site, twenty attempts each"
+          },
+          {
+            "at": "0.69",
+            "event": "THRESHOLD: ninety-nine percent — the project's own condition N4"
+          },
+          {
+            "at": "0.78",
+            "event": "WINDOW: re-run on every Chrome stable release"
+          },
+          {
+            "at": "0.84",
+            "event": "the corrected claim, with four blanks still to fill — held through a 2.2s tail"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesCorrection",
+          "props": {
+            "sparkLine": "Mocks built from the guess.",
+            "before": "“75 tests pass, so insertion works.”",
+            "beforeNote": "green against a copy of its own assumptions",
+            "parts": [
+              {
+                "k": "MEASURE",
+                "v": "inserts per live site, 20 attempts each"
+              },
+              {
+                "k": "THRESHOLD",
+                "v": "99%, the project's own condition N4"
+              },
+              {
+                "k": "WINDOW",
+                "v": "re-run on every Chrome stable release"
+              }
+            ],
+            "partsAt": [
+              0.567,
+              0.694,
+              0.777
+            ],
+            "after": "“Insert works on ___ at __ of 20, Chrome ___, on ___.”",
+            "afterAt": 0.836,
+            "evidence": [
+              {
+                "src": "lib/core.js",
+                "code": "input: \"#prompt-textarea\""
+              },
+              {
+                "src": "e2e/mock-sites.js",
+                "code": "<div id=\"prompt-textarea\" …>"
+              }
+            ],
+            "evidenceAt": 0.231,
+            "evidenceNote": "The test page is built from the guess it is testing.",
+            "strikeSpan": [
+              564,
+              492
+            ],
+            "beforeInk": true
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-10-10T14:38:50.322104+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.89,
+      "audio_file": "mp3/beat-B07.mp3",
+      "trail_silence_s": 2.2,
+      "render_duration_s": 19.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B07.mp4",
+        "filled_by": "remotion:DescartesCorrection",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "BOUNDARY",
+      "role_note": "Q5 — the one thing it deliberately will not do. Each row is checkable in the package: insertIntoSite dispatches no key events and clicks nothing (content.js); the manifest's permissions are exactly storage + unlimitedStorage; PRIVACY.md 'Pepper never reads the rest of the page'. HONESTY: C17 marks 'never submits' as 'Pass on mocks; code read' with the live row blank — the footer says exactly that.",
+      "narration_text": "And the one thing it will never do. Pepper will not press send. That is not a missing feature; it is the boundary. It asks for two browser permissions. It reads the prompt box, not the page. The moment a tool sends for you, it needs permission to act, and acting on context nobody checked is where the damage starts.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "tick",
+        "show": [
+          {
+            "at": "0.09",
+            "event": "row 1 ticks: never presses send — insertIntoSite dispatches no key events, clicks nothing"
+          },
+          {
+            "at": "0.34",
+            "event": "row 2 ticks: two permissions — storage, unlimitedStorage"
+          },
+          {
+            "at": "0.43",
+            "event": "row 3 ticks: reads the prompt box, not the page"
+          },
+          {
+            "at": "0.60",
+            "event": "footer: checked in code and on mocks; the live row, N4, is blank"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesChecklist",
+          "props": {
+            "sparkLine": "It never presses send.",
+            "rows": [
+              {
+                "title": "Never presses send",
+                "sub": "insertIntoSite dispatches no key events and clicks nothing"
+              },
+              {
+                "title": "Two permissions",
+                "sub": "storage and unlimitedStorage — nothing else in the manifest"
+              },
+              {
+                "title": "Reads the box, not the page",
+                "sub": "the prompt box, plus the newest reply only where you turned learning on"
+              }
+            ],
+            "rowsAt": [
+              0.088,
+              0.34,
+              0.429
+            ],
+            "unticked": false,
+            "footer": "Checked in code and on mock pages. The live-site row, N4, is still blank.",
+            "footerAt": 0.601
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-10-10T14:40:11.777399+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.331,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 17.333333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B08.mp4",
+        "filled_by": "remotion:DescartesChecklist",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "LIMITS",
+      "role_note": "What the pitch does not establish — the course's own move pointed at the author's own claim. Each condition is from CHANGES.md: selectors untested live (C17, H7 open), the model was mocked ('Not tested, or known limits'), no user has run it (H5–H8 and H13–H14 open). The claim and question land on their words (claimAt / questionAt); they were hardcoded to 0.04 / 0.20, three seconds ahead of the narration.",
+      "narration_text": "Now the part a pitch usually skips. Point the same question at my own claim. What would have to be true for 'Pepper works' to be wrong? Three conditions, and not one of them has been tested. The selectors could be stale. A real model might ignore the six-part contract; every model in those tests was a fake. And nobody but me has ever opened it.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 19,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "protocol",
+        "show": [
+          {
+            "at": "0.04",
+            "event": "the claim sits faint from the start — the pitch's own claim, \"Pepper works.\" — and comes up to full strength on \"my own claim\""
+          },
+          {
+            "at": "0.20",
+            "event": "the question cuts in beneath, under a terracotta rule"
+          },
+          {
+            "at": "0.32",
+            "event": "on 'Three conditions', three numbered empty boxes appear; each fills as it is named"
+          },
+          {
+            "at": "0.43",
+            "event": "condition 1: the selectors match the live boxes — untested"
+          },
+          {
+            "at": "0.51",
+            "event": "condition 2: a real model keeps the six-part contract — the model was mocked"
+          },
+          {
+            "at": "0.76",
+            "event": "condition 3: someone other than me has used it — nobody has"
+          },
+          {
+            "at": "0.84",
+            "event": "footer, held through a 2.0s tail: three conditions, none tested — that is the project"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesProtocol",
+          "props": {
+            "sparkLine": "My own claim, doubted.",
+            "claim": "“Pepper works.”",
+            "question": "What would have to be true for that to be wrong?",
+            "conditions": [
+              "The selectors match the live boxes. Untested.",
+              "A real model keeps the six-part contract. Mocked.",
+              "Someone other than me has used it. Nobody has."
+            ],
+            "conditionsAt": [
+              0.429,
+              0.508,
+              0.755
+            ],
+            "footer": "Three conditions. None of them tested. That is the project.",
+            "footerAt": 0.845,
+            "slotsAt": 0.316,
+            "claimAt": 0.146,
+            "questionAt": 0.196,
+            "claimPreview": 0.3
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-10T14:52:53.225906+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.19,
+      "audio_file": "mp3/beat-B09.mp3",
+      "trail_silence_s": 2.0,
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B09.mp4",
+        "filled_by": "remotion:DescartesProtocol",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "WHY",
+      "role_note": "Q7 — why this project, and which half is showing off. AUTHORSHIP, from CHANGES.md: v0.3 was built as 'Claude steps' C1–C17 against my design document; the 'Human steps' H1–H14 are mine and H2–H14 are open. So the left column claims what I did (specify, direct), not code I did not write. Q3 (who opens it, first 60 seconds) is the last sentence: run the tests, then find the column of unsupported claims. Headings shortened to ALREADY DONE / NOT DONE YET: the longer ones wrapped and the heading rule cut them in half.",
+      "narration_text": "So why this one? Half is showing off, and I will say which. I designed Pepper and directed the build; Claude wrote the code, and the tests went green. The other half is new: running a check that can come back bad, and publishing the number anyway. Anyone opening this repository should run the tests in a minute, then find that column.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 18,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "remotion",
+        "motion": "split",
+        "show": [
+          {
+            "at": "0.19",
+            "event": "left column, ALREADY DONE — write the design, direct the build, get the tests green"
+          },
+          {
+            "at": "0.42",
+            "event": "right column, NOT DONE YET — run a check that can fail, publish it, hand it to someone else"
+          },
+          {
+            "at": "0.74",
+            "event": "gap line: the left column is a portfolio; the right column is the project"
+          }
+        ],
+        "remotion": {
+          "pattern": "DescartesSplit",
+          "props": {
+            "sparkLine": "Which half is showing off.",
+            "leftLabel": "ALREADY DONE",
+            "rightLabel": "NOT DONE YET",
+            "leftLines": [
+              "Write the design document",
+              "Direct an AI build against it",
+              "Get 75 tests to pass"
+            ],
+            "rightLines": [
+              "Run a check that can fail",
+              "Publish the number anyway",
+              "Hand it to someone else"
+            ],
+            "gapLine": "The left column is a portfolio. The right column is the project.",
+            "leftAt": 0.175,
+            "rightAt": 0.434,
+            "gapAt": 0.702,
+            "strikeLeft": false
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-10-10T14:54:16.497356+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.72,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 17.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B10.mp4",
+        "filled_by": "remotion:DescartesSplit",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "VERDICT",
+      "role_note": "The verdict page carries the brief's two closing lists. It is labelled as PROJECT-BRIEF.md, my document, not as a Claude reply. Lines are bare sentences (the component strips lead numbers).",
+      "narration_text": "So, the verdict, in two lists. Exists today: the extension, seventy-five passing tests, twenty-two screenshots, a protocol with every result cell blank, and a draft privacy notice. Will exist: that protocol run on five live sites, a measured insert rate for each, a failure analysis, and a check that fails loudly when a site moves its box. Nothing in the second list has happened yet.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 21,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "bookend",
+        "motion": "artifact",
+        "show": [
+          {
+            "at": "0.06",
+            "event": "the artifact page opens: PROJECT-BRIEF.md · 10 Oct 2026"
+          },
+          {
+            "at": "0.14",
+            "event": "lines stagger in across the beat — two 'exists today', two 'will exist', the boundary, the disclosure"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "What It Had to Guess",
+            "artifactHeading": "Exists today · Will exist",
+            "brandLabel": "PROJECT-BRIEF.md · 10 Oct 2026",
+            "artifactLines": [
+              "Exists today: Pepper v0.3, 75 passing unit tests, 20 mock-page browser checks, 22 screenshots.",
+              "Exists today: a live-test protocol with every result cell blank, and a draft privacy notice.",
+              "Will exist: the protocol run on all five live sites, with a measured insert rate per site.",
+              "Will exist: a failure analysis, and a check that fails loudly when a site moves its box.",
+              "It will never press send. That is the boundary, not a gap.",
+              "Disclosure — synthetic narration; built with Claude Code; the alternatives were read, not run."
+            ]
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-10-10T14:45:43.876783+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 19.76,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 19.791666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B11.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "HANDOFF",
+      "role_note": "HANDOFF LAW — the prompt is read aloud verbatim, then discussed. No output lines: nothing has been run, so nothing is shown as an answer. The chip says so.",
+      "narration_text": "Your turn, and here is the prompt. Take the last tool you shipped. List every claim its README makes. Beside each one, write the exact test that supports it, and where there is none, write: nobody has checked this. Then count the second column. That count separates what you know from what you have been saying. Run it on your own repository. The number is usually worse than you expect.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 22,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "ask",
+        "motion": "type-on",
+        "show": [
+          {
+            "at": "0.04",
+            "event": "composer opens with greeting 'Your turn.'; chip reads RECONSTRUCTED UI · A PROMPT FOR YOU · NOT RUN"
+          },
+          {
+            "at": "0.10",
+            "event": "the suggested prompt types in as it is read aloud"
+          },
+          {
+            "at": "0.70",
+            "event": "runningText 'paste this into Claude…' holds while the prompt is discussed"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "RECONSTRUCTED UI · A PROMPT FOR YOU · NOT RUN",
+            "segment": "your turn",
+            "command": "Take the last tool I shipped. List every claim its README makes. Beside each, write the exact test that supports it — and where there is none, write “nobody has checked this”. Then count the second column.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "largeText": true,
+            "folderLabel": "@amoghmaddur",
+            "modelLabel": "Claude",
+            "effortLabel": "your session",
+            "typeAt": 0.081,
+            "typeDur": 0.506,
+            "runAt": 0.594
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-10-10T14:47:49.705449+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.417,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 17.458333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B12.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-14T17:08:04"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "OUTRO",
+      "role_note": "OUTRO LAW — exact title restate, terracotta period, the author's own name beneath. PortfolioTitleOutro, not ClaudeTitleOutro: the lock hardcodes the instructor's handle, which this assignment forbids. No mascot, no subline.",
+      "narration_text": "What it had to guess. Uh-mohg Muddoor, for INFO seven three seven five.",
+      "voice": "am_puck",
+      "engine": "kokoro",
+      "estimated_duration_s": 4,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "lane": "bookend",
+        "motion": "poster",
+        "show": [
+          {
+            "at": "0.10",
+            "event": "title restates poster-style with the terracotta period"
+          },
+          {
+            "at": "0.40",
+            "event": "'Amogh Maddur' settles beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "PortfolioTitleOutro",
+          "props": {
+            "title": "What It Had to Guess.",
+            "handle": "Amogh Maddur",
+            "slug": "pepper-context-and-access"
+          },
+          "rendered": {
+            "out": "media/B13.mp4",
+            "at": "2026-10-10T14:48:21.351348+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 4.682,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 4.708333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\B13.mp4",
+        "filled_by": "remotion:PortfolioTitleOutro",
+        "at": "2026-10-14T17:08:04"
+      }
+    }
+  ]
+}

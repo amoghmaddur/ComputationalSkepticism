@@ -696,6 +696,14 @@ def compile_reel(a):
     audio, akind = build_master_audio(folder, beats, a.audio, work)
     atomic_json(writable_path(folder, 'build-state.json'), {'status': 'rendering'})
 
+    # Opt-in crossfade (see the assembly below). The per-clip head/tail dip is
+    # off in that mode, and the mode is part of the cache key.
+    global FADE_S
+    _tr = (sheet.get("metadata", {}) or {}).get("transition") or {}
+    xfade_d = float(_tr.get("duration", 0) or 0) if _tr.get("type") == "crossfade" else 0.0
+    xfade_style = str(_tr.get("style", "fade"))
+    if xfade_d > 0:
+        FADE_S = 0.0
     report, t0 = [], 0.0
     for b in beats:
         bid = b["beat_id"]
@@ -705,7 +713,7 @@ def compile_reel(a):
         bshot = b.get("shot", {})
         key = (f"L4|{w}x{h}@{fps}|{sheet.get('metadata', {}).get('fit', 'crop')}|report={is_source_report(b)}"
                f"|{dur:.3f}|{bshot.get('motion', '')}"
-               f"|{bshot.get('focus', '')}|{bshot.get('treatment', '')}|"
+               f"|{bshot.get('focus', '')}|{bshot.get('treatment', '')}|xf={xfade_d:.3f}|"
                + (sha1(src) if src else "slate"))
         if a.force or manifest.get(bid) != key or not out.exists():
             src, status = compile_clip(folder, b, out, w, h, fps, font, work,
@@ -733,6 +741,9 @@ def compile_reel(a):
         return (s.get("motion")
                 or ("kenburns" if s.get("type") == "STILL"
                     else (s.get("type") or "?").lower()))
+    if xfade_d > 0:
+        print(f"[art] transitions: {xfade_style} crossfade {xfade_d:.2f}s, each starting on the "
+              f"next beat's first audio frame (audio clock unchanged)")
     hist = Counter(_eff_motion(b) for b in beats)
     print("[art] motion histogram: "
           + "  ".join(f"{k}:{n}" for k, n in hist.most_common()))
@@ -791,7 +802,15 @@ def compile_reel(a):
         title_png = work / "channel_title.png"
         make_channel_title_png(title_png, channel_title, font, int(h * 0.030))
 
-    cmd = [FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", lst]
+    if xfade_d > 0:
+        cmd = [FFMPEG, "-y"]
+        for b in beats:
+            cmd += ["-i", str(clips / (b['beat_id'] + '.mp4'))]
+        v_inputs = len(beats)
+    else:
+        cmd = [FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", lst]
+        v_inputs = 1
+    a_idx = v_inputs
     cmd += (["-i", str(audio)] if audio else
             ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"])
     for png, ts, dur in label_pngs:
@@ -800,12 +819,23 @@ def compile_reel(a):
         cmd += ["-i", str(title_png)]
 
     fc = []
-    n_label_inputs = 2 + len(label_pngs)   # 0=video, 1=audio, 2..=labels
-    if label_pngs or title_png:
-        prev = "0:v"
+    n_label_inputs = a_idx + 1 + len(label_pngs)   # video input(s), audio, labels, title
+    base = "0:v"
+    if xfade_d > 0:
+        for i in range(v_inputs):
+            fc.append(f"[{i}:v]tpad=stop_mode=clone:stop_duration={xfade_d:.3f},"
+                      f"setpts=PTS-STARTPTS[p{i}]")
+        base, off = "p0", 0.0
+        for i in range(1, v_inputs):
+            off += beat_duration(beats[i - 1])          # beat i's audio starts here
+            fc.append(f"[{base}][p{i}]xfade=transition={xfade_style}:duration={xfade_d:.3f}"
+                      f":offset={off:.3f}[x{i}]")
+            base = f"x{i}"
+    if label_pngs or title_png or xfade_d > 0:
+        prev = base
         for i, (png, ts, dur) in enumerate(label_pngs):
             nxt = f"v{i}"
-            fc.append(f"[{prev}][{i + 2}:v]overlay=16:H-h-16:"
+            fc.append(f"[{prev}][{a_idx + 1 + i}:v]overlay=16:H-h-16:"
                       f"enable='between(t,{ts:.3f},{ts + dur:.3f})'[{nxt}]")
             prev = nxt
         if title_png:
@@ -820,9 +850,9 @@ def compile_reel(a):
         else:
             fc.append(f"[{prev}]null[vout]")
     if fc:
-        cmd += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "1:a"]
+        cmd += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{a_idx}:a"]
     else:
-        cmd += ["-map", "0:v", "-map", "1:a"]
+        cmd += ["-map", "0:v", "-map", f"{a_idx}:a"]
     cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "16",
             "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest",
             "-t", f"{total:.3f}", str(out)]

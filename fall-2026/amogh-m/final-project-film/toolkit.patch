@@ -1,0 +1,2866 @@
+diff --git a/SCENE-DOC-TODO.md b/SCENE-DOC-TODO.md
+index ccc4a4f..f59e61f 100644
+--- a/SCENE-DOC-TODO.md
++++ b/SCENE-DOC-TODO.md
+@@ -8,7 +8,7 @@ own account of itself. Search can reach these by name and props only.
+ The fix per row is one honest sentence at the top of the .tsx: what it puts
+ on screen, and when to reach for it. Add it, then re-run the builder.
+ 
+-**118 scenes** (18% of 653).
++**118 scenes** (18% of 659).
+ 
+ | Scene | File | Folder / registered under |
+ |---|---|---|
+diff --git a/runtime/remotion/public/pepper/panel-result-model-2026-10-10.png b/runtime/remotion/public/pepper/panel-result-model-2026-10-10.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..3b68eb98bf4a91cf2c90c2776e49b4bb33352697
+GIT binary patch
+literal 65264
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/runtime/remotion/src/DescartesIllu.tsx b/runtime/remotion/src/DescartesIllu.tsx
+index fa0fe42..7332c1b 100644
+--- a/runtime/remotion/src/DescartesIllu.tsx
++++ b/runtime/remotion/src/DescartesIllu.tsx
+@@ -49,20 +49,35 @@ export const descartesProtocolSchema = z.object({
+   /** Start fraction per condition, aligned to the narration. */
+   conditionsAt: z.array(z.number()).default([]),
+   footerAt: z.number().optional(),
++  /** When set, every numbered box appears at this fraction (as the count is
++   *  spoken) and each condition's text arrives on its own word. */
++  slotsAt: z.number().optional(),
++  /** When the claim and the question land. Omitted = 0.04 / 0.20. */
++  claimAt: z.number().optional(),
++  questionAt: z.number().optional(),
++  /** Opacity the claim holds before claimAt (e.g. 0.3); omitted = hidden until claimAt. */
++  claimPreview: z.number().optional(),
+ });
+ export type DescartesProtocolProps = z.infer<typeof descartesProtocolSchema>;
+ 
+ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
+   const p = useP();
+-  const claimIn = ease(remap(p, 0.04, 0.14, 0, 1));
+-  const qIn = ease(remap(p, 0.20, 0.32, 0, 1));
++  const cA = p_.claimAt ?? 0.04;
++  const qA = p_.questionAt ?? 0.20;
++  const claimIn = ease(remap(p, cA, cA + 0.10, 0, 1));
++  const qIn = ease(remap(p, qA, qA + 0.10, 0, 1));
+   const nC = p_.conditions.length;
+   return (
+     <AbsoluteFill style={{ background: STAGE }}>
+       <div style={{
+         position: 'absolute', left: SAFE_L, right: 1280 - SAFE_R, top: 128,
+         textAlign: 'center', fontFamily: SERIF, fontSize: 78, color: INK,
+-        opacity: claimIn, transform: `translateY(${(1 - claimIn) * 14}px)`,
++        // with claimPreview, the claim sits faint from the start (the pitch's own claim)
++        // and comes up to full strength on the word that names it
++        opacity: p_.claimPreview === undefined ? claimIn
++          : Math.max(ease(remap(p, 0.02, 0.08, 0, 1)) * p_.claimPreview, claimIn),
++        transform: `translateY(${(1 - (p_.claimPreview === undefined ? claimIn : 1)) * 14}px) scale(${
++          p_.claimPreview === undefined ? 1 : 1 + 0.04 * Math.sin(Math.PI * claimIn)})`,
+       }}>{p_.claim}</div>
+ 
+       <div style={{
+@@ -72,8 +87,9 @@ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
+       }}>{p_.question}</div>
+ 
+       <div style={{
+-        position: 'absolute', left: SAFE_L + 40, width: (SAFE_R - SAFE_L) - 80, top: 292,
+-        height: 3, background: SPARK, opacity: 0.9 * qIn,
++        position: 'absolute', left: SAFE_L + 40 + ((SAFE_R - SAFE_L) - 80) * (1 - qIn) / 2,
++        width: ((SAFE_R - SAFE_L) - 80) * qIn, top: 292,
++        height: 3, background: SPARK, opacity: 0.9 * clamp(qIn * 2, 0, 1),
+       }} />
+ 
+       {p_.conditions.map((c, i) => {
+@@ -81,11 +97,12 @@ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
+         const gap = nC > 1 ? (0.72 - 0.34) / (nC - 1) : 0;
+         const t0 = p_.conditionsAt[i] ?? (0.34 + i * gap);
+         const ci = ease(remap(p, t0, t0 + 0.12, 0, 1));
++        const si = p_.slotsAt === undefined ? ci : ease(remap(p, p_.slotsAt, p_.slotsAt + 0.06, 0, 1));
+         return (
+           <div key={i} style={{
+             position: 'absolute', left: SAFE_L + 30, width: (SAFE_R - SAFE_L) - 60,
+             top: 336 + i * 98, display: 'flex', alignItems: 'center', gap: 22,
+-            opacity: ci, transform: `translateX(${(1 - ci) * -18}px)`,
++            opacity: Math.max(ci, si), transform: `translateX(${(1 - si) * -18}px)`,
+           }}>
+             <div style={{
+               width: 46, height: 46, flexShrink: 0,
+@@ -93,7 +110,8 @@ export const DescartesProtocol: React.FC<DescartesProtocolProps> = (p_) => {
+               display: 'flex', alignItems: 'center', justifyContent: 'center',
+               fontFamily: SANS, fontSize: 24, fontWeight: 700, color: INK,
+             }}>{i + 1}</div>
+-            <div style={{ fontFamily: SERIF, fontSize: 40, color: INK, lineHeight: 1.2 }}>{c}</div>
++            <div style={{ fontFamily: SERIF, fontSize: 40, color: INK, lineHeight: 1.2, opacity: ci,
++              transform: `translateX(${(1 - ci) * -12}px)` }}>{c}</div>
+           </div>
+         );
+       })}
+@@ -140,16 +158,20 @@ export type DescartesSplitProps = z.infer<typeof descartesSplitSchema>;
+ const Col: React.FC<{
+   x: number; w: number; label: string; lines: string[]; reveal: number;
+   accent?: boolean; dy?: number; strike?: number;
+-}> = ({ x, w, label, lines, reveal, accent, dy = 0, strike = 0 }) => (
++  side?: number;
++}> = ({ x, w, label, lines, reveal, accent, dy = 0, strike = 0, side = 0 }) => (
+   <>
+     <div style={{
+       position: 'absolute', left: x, width: w, top: 138 + dy,
+-      fontFamily: SANS, fontSize: 40, fontWeight: 700, letterSpacing: 2,
+-      color: accent ? INK : SOFT, opacity: reveal > 0 ? 1 : 0,
++      // one line, always: a heading that wraps gets cut in half by the rule below it
++      fontFamily: SANS, fontSize: Math.min(40, Math.floor(w / Math.max(1, label.length) / 0.70)),
++      fontWeight: 700, letterSpacing: 2, whiteSpace: 'nowrap',
++      color: accent ? INK : SOFT, opacity: clamp(reveal * 4, 0, 1),
++      transform: `translateX(${side * (1 - clamp(reveal * 3, 0, 1)) * 18}px)`,
+     }}>{label}</div>
+     <div style={{
+-      position: 'absolute', left: x, width: w, top: 194 + dy, height: 3,
+-      background: accent ? SPARK : INK, opacity: 0.8 * clamp(reveal * 3, 0, 1),
++      position: 'absolute', left: x, width: w * clamp(reveal * 3, 0, 1), top: 194 + dy, height: 3,
++      background: accent ? SPARK : INK, opacity: 0.8,
+     }} />
+     {lines.map((l, i) => {
+       const li = ease(remap(reveal, i * 0.26, i * 0.26 + 0.34, 0, 1));
+@@ -198,13 +220,13 @@ export const DescartesSplit: React.FC<DescartesSplitProps> = (p_) => {
+           opacity: introIn, transform: `translateY(${(1 - introIn) * 10}px)`,
+         }}>{p_.intro}</div>
+       )}
+-      <Col x={SAFE_L} w={colW} label={p_.leftLabel} lines={p_.leftLines} reveal={lRev} dy={dy}
++      <Col x={SAFE_L} w={colW} label={p_.leftLabel} lines={p_.leftLines} reveal={lRev} dy={dy} side={-1}
+            strike={p_.strikeLeft ? ease(remap(p, rA + 0.04, gA, 0, 1)) : 0} />
+       <div style={{
+-        position: 'absolute', left: 640, top: 132 + dy, width: 2, height: 430 - dy,
+-        background: INK, opacity: 0.22 * clamp(lRev * 3, 0, 1),
++        position: 'absolute', left: 640, top: 132 + dy, width: 2, height: (430 - dy) * clamp(lRev * 2, 0, 1),
++        background: INK, opacity: 0.22,
+       }} />
+-      <Col x={SAFE_R - colW} w={colW} label={p_.rightLabel} lines={p_.rightLines} reveal={rRev} accent dy={dy} />
++      <Col x={SAFE_R - colW} w={colW} label={p_.rightLabel} lines={p_.rightLines} reveal={rRev} accent dy={dy} side={1} />
+       {p_.gapLine && (
+         <div style={{
+           position: 'absolute', left: SAFE_L, right: 1280 - SAFE_R, top: 604,
+@@ -231,6 +253,16 @@ export const descartesCorrectionSchema = z.object({
+   /** Start fraction per column, aligned to the narration. */
+   partsAt: z.array(z.number()).default([]),
+   afterAt: z.number().optional(),
++  /** Verbatim evidence for WHY the claim fails, shown where the parts will
++   *  land, from evidenceAt until the first part arrives. */
++  evidence: z.array(z.object({ src: z.string(), code: z.string() })).default([]),
++  evidenceAt: z.number().optional(),
++  evidenceNote: z.string().default(''),
++  /** Strike line [left, width] in stage px — sized to the claim it strikes. */
++  strikeSpan: z.array(z.number()).length(2).optional(),
++  /** Set the struck claim in INK instead of SOFT — keeps glyph contrast where
++   *  the strike crosses it, and suits a claim whose first half is true. */
++  beforeInk: z.boolean().default(false),
+ });
+ export type DescartesCorrectionProps = z.infer<typeof descartesCorrectionSchema>;
+ 
+@@ -243,17 +275,38 @@ export const DescartesCorrection: React.FC<DescartesCorrectionProps> = (p_) => {
+       <div style={{
+         position: 'absolute', left: SAFE_L, right: 1280 - SAFE_R, top: 132,
+         textAlign: 'center', fontFamily: SERIF, fontSize: 60,
+-        color: SOFT, opacity: inB,
++        color: p_.beforeInk ? INK : SOFT, opacity: inB,
+       }}>{p_.before}</div>
+       <div style={{
+-        position: 'absolute', left: 300, top: 168,
+-        width: strike * 680, height: 4, background: SPARK,
++        position: 'absolute', left: p_.strikeSpan?.[0] ?? 300, top: 168,
++        width: strike * (p_.strikeSpan?.[1] ?? 680), height: 4, background: SPARK,
+       }} />
+       <div style={{
+         position: 'absolute', left: 0, right: 0, top: 214, textAlign: 'center',
+         fontFamily: SANS, fontSize: 36, color: SOFT, opacity: strike,
+       }}>{p_.beforeNote}</div>
+ 
++      {p_.evidence.length > 0 && (() => {
++        const e0 = p_.evidenceAt ?? 0.28;
++        const e1 = p_.partsAt[0] ?? 0.42;
++        const eo = ease(remap(p, e0, e0 + 0.07, 0, 1)) * (1 - ease(remap(p, e1 - 0.05, e1, 0, 1)));
++        return (
++          <div style={{ position: 'absolute', left: SAFE_L, width: SAFE_R - SAFE_L, top: 300, opacity: eo }}>
++            {p_.evidence.map((ev, i) => (
++              <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 28, marginBottom: 40,
++                opacity: ease(remap(p, e0 + i * 0.05, e0 + i * 0.05 + 0.07, 0, 1)) }}>
++                <div style={{ width: 300, flexShrink: 0, textAlign: 'right', fontFamily: SANS, fontSize: 28, color: SOFT }}>{ev.src}</div>
++                <div style={{ fontFamily: MONO, fontSize: 36, color: INK }}>{ev.code}</div>
++              </div>
++            ))}
++            {p_.evidenceNote && (
++              <div style={{ marginTop: 44, textAlign: 'center', fontFamily: SERIF, fontSize: 36, color: INK,
++                opacity: ease(remap(p, e0 + 0.10, e0 + 0.17, 0, 1)) }}>{p_.evidenceNote}</div>
++            )}
++          </div>
++        );
++      })()}
++
+       {p_.parts.map((pt, i) => {
+         const t0 = p_.partsAt[i] ?? (0.42 + i * 0.16);
+         const pi = ease(remap(p, t0, t0 + 0.11, 0, 1));
+@@ -267,7 +320,7 @@ export const DescartesCorrection: React.FC<DescartesCorrectionProps> = (p_) => {
+               fontFamily: SANS, fontSize: 44, fontWeight: 700, letterSpacing: 2,
+               color: SPARK, marginBottom: 14,
+             }}>{pt.k.toUpperCase()}</div>
+-            <div style={{ width: '100%', height: 3, background: INK, opacity: 0.75, marginBottom: 16 }} />
++            <div style={{ width: `${pi * 100}%`, height: 3, background: INK, opacity: 0.75, marginBottom: 16 }} />
+             {/* pre-line so the authored line breaks in the value actually land */}
+             <div style={{ fontFamily: MONO, fontSize: 31, color: INK, lineHeight: 1.4, whiteSpace: 'pre-line' }}>{pt.v}</div>
+           </div>
+@@ -392,6 +445,13 @@ export const descartesLedgerSchema = z.object({
+   source: z.string().default(''),
+   /** Start fraction per row, aligned to the spoken figure. */
+   rowsAt: z.array(z.number()).default([]),
++  /** Roll whole counts up to their value. Off when a mid-roll frame would
++   *  read as a different, false result ("37 of 75 pass"). */
++  count: z.boolean().default(true),
++  /** When the source line appears. Provenance can sit on screen from the start. */
++  sourceAt: z.number().optional(),
++  /** Vertical step between rows, in stage px. */
++  rowGap: z.number().default(62),
+ });
+ export type DescartesLedgerProps = z.infer<typeof descartesLedgerSchema>;
+ 
+@@ -415,7 +475,7 @@ export const DescartesLedger: React.FC<DescartesLedgerProps> = (p_) => {
+         const cnt = ease(remap(p, t0, t0 + 0.22, 0, 1));
+         return (
+           <div key={i} style={{
+-            position: 'absolute', left: SAFE_L, width: SAFE_R - SAFE_L, top: 214 + i * 62,
++            position: 'absolute', left: SAFE_L, width: SAFE_R - SAFE_L, top: 214 + i * p_.rowGap,
+             display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+             opacity: s, transform: `translateY(${(1 - s) * 10}px)`,
+           }}>
+@@ -423,7 +483,10 @@ export const DescartesLedger: React.FC<DescartesLedgerProps> = (p_) => {
+             <div style={{
+               fontFamily: MONO, fontSize: 36, fontWeight: 600,
+               color: r.damning ? SPARK : INK,
+-            }}>{countUp(r.value, cnt)}</div>
++              transform: `translateX(${(1 - s) * 24}px) scale(${r.damning
++                ? 1 + 0.18 * Math.sin(Math.PI * clamp(remap(p, t0 + 0.04, t0 + 0.14, 0, 1), 0, 1)) : 1})`,
++              transformOrigin: 'right center',
++            }}>{p_.count ? countUp(r.value, cnt) : r.value}</div>
+           </div>
+         );
+       })}
+@@ -438,7 +501,7 @@ export const DescartesLedger: React.FC<DescartesLedgerProps> = (p_) => {
+         <div style={{
+           position: 'absolute', left: 0, right: 0, bottom: 34, textAlign: 'center',
+           fontFamily: SANS, fontSize: 28, color: SOFT,
+-          opacity: ease(remap(p, 0.90, 0.98, 0, 1)),
++          opacity: ease(remap(p, p_.sourceAt ?? 0.90, (p_.sourceAt ?? 0.90) + 0.08, 0, 1)),
+         }}>{p_.source}</div>
+       )}
+       <SparkLine text={p_.sparkLine} />
+diff --git a/runtime/remotion/src/PepperIllu.tsx b/runtime/remotion/src/PepperIllu.tsx
+new file mode 100644
+index 0000000..5fc7db5
+--- /dev/null
++++ b/runtime/remotion/src/PepperIllu.tsx
+@@ -0,0 +1,503 @@
++/**
++ * PepperIllu.tsx — figures for pepper-context-and-access
++ * ("What It Had to Guess").
++ *
++ * GATE L note: `./art scenes` was run for every beat before authoring. It
++ * returned no component for (a) a rough request expanding into six labelled
++ * prompt sections, (b) an access ladder where the cost of missing context
++ * grows with permission, (c) a prompt with a held-out assumptions block, or
++ * (d) a three-way product comparison with a per-column gap line. Those four
++ * are a logged PUNT built as new components, not slated. The remaining beats
++ * REUSE library components (DescartesLedger / Correction / Checklist /
++ * Protocol / Split, ClaudeVerdictArtifact, ClaudeComposerAsk) — a hit is a
++ * lead, and those five are generic shapes with generic props.
++ *
++ * These are written FOR the context/access argument. The grammar is the
++ * LABELLED BOX: context that is named is context you can check, and the only
++ * honest thing to do with context you do not have is leave it outside the box.
++ *
++ * FILL-THE-CANVAS note: GATE V counts a pixel as ink only when it sits >28/255
++ * off the background, and this brand's white cards are 22 off the cream stage —
++ * invisible to the metric. These figures carry their fill with INK glyphs and
++ * ink rules spanning the safe area, not with white panels.
++ *
++ * Every scene is a pure function of the audio clock via useP(), and every
++ * composition is sized from `beatSeconds` so the clock spans the whole beat.
++ *
++ * Composition IDs:
++ *   PepperSixParts | PepperAccessLadder | PepperAssumptions | PepperAlternatives
++ *   PepperScreenshot
++ */
++import React from 'react';
++import { z } from 'zod';
++import { AbsoluteFill, Img, staticFile } from 'remotion';
++import { SparkLine, useP, clamp, remap, ease, SERIF, SANS, MONO, STAGE } from './illustrations/kit';
++import { CLAUDE } from './tokens/claude';
++
++const INK = CLAUDE.INK;
++const SOFT = CLAUDE.INK_SOFT;
++const SPARK = CLAUDE.SPARK;
++const SAFE_L = 74;
++const SAFE_R = 1206;
++const SAFE_W = SAFE_R - SAFE_L;
++
++// ══════════════════════════════════════════════════════════════════════════
++// PepperSixParts — a rough request at the top, then the six labelled sections
++// it becomes. Each section arrives with the one thing it is FOR, so the
++// viewer reads the contract rather than admiring a layout.
++// ══════════════════════════════════════════════════════════════════════════
++export const pepperSixPartsSchema = z.object({
++  beatSeconds: z.number().optional(),
++  sparkLine: z.string().default('Six named parts.'),
++  rough: z.string().default('help me write a cover letter'),
++  roughLabel: z.string().default('WHAT YOU TYPE'),
++  roughAt: z.number().optional(),
++  /** When set, all six numbered slots and their rules appear here (as the
++   *  count is spoken); each label and purpose still lands on its own word. */
++  slotsAt: z.number().optional(),
++  parts: z.array(z.object({ k: z.string(), v: z.string() })).default([]),
++  /** Start fraction per part, aligned to the narration. */
++  partsAt: z.array(z.number()).default([]),
++  footer: z.string().default(''),
++  footerAt: z.number().optional(),
++});
++export type PepperSixPartsProps = z.infer<typeof pepperSixPartsSchema>;
++
++export const PepperSixParts: React.FC<PepperSixPartsProps> = (p_) => {
++  const p = useP();
++  const rA = p_.roughAt ?? 0.03;
++  const rIn = ease(remap(p, rA, rA + 0.10, 0, 1));
++  const n = p_.parts.length || 1;
++  // Two columns of three; the last part must COMPLETE by ~0.86.
++  const gap = n > 1 ? (0.74 - 0.26) / (n - 1) : 0;
++  const colW = Math.floor((SAFE_W - 56) / 2);
++
++  return (
++    <AbsoluteFill style={{ background: STAGE }}>
++      {/* the rough request — mono, quoted, deliberately thin */}
++      <div style={{
++        position: 'absolute', left: SAFE_L, width: SAFE_W, top: 112,
++        textAlign: 'center', opacity: rIn, transform: `translateY(${(1 - rIn) * 12}px)`,
++      }}>
++        <div style={{ fontFamily: SANS, fontSize: 24, letterSpacing: '0.14em', color: SOFT }}>
++          {p_.roughLabel}
++        </div>
++        <div style={{ fontFamily: MONO, fontSize: 46, color: INK, marginTop: 10 }}>
++          &ldquo;{p_.rough}&rdquo;
++        </div>
++      </div>
++
++      {/* the rule that separates the ask from the contract */}
++      <div style={{
++        position: 'absolute', left: SAFE_L + 150, width: SAFE_W - 300, top: 226,
++        height: 3, background: SPARK, opacity: 0.9 * rIn,
++      }} />
++
++      {p_.parts.map((part, i) => {
++        const t0 = p_.partsAt[i] ?? (0.26 + i * gap);
++        const a = ease(remap(p, t0, t0 + 0.10, 0, 1));
++        const s = p_.slotsAt === undefined ? a
++          : ease(remap(p, p_.slotsAt + i * 0.012, p_.slotsAt + i * 0.012 + 0.06, 0, 1));
++        const col = i % 2;
++        const row = Math.floor(i / 2);
++        return (
++          <div key={i} style={{
++            position: 'absolute',
++            left: SAFE_L + col * (colW + 56), width: colW,
++            top: 268 + row * 128,
++            opacity: Math.max(a, s), transform: `translateY(${(1 - s) * 14}px)`,
++          }}>
++            <div style={{ display: 'flex', alignItems: 'baseline', gap: 14 }}>
++              <div style={{
++                fontFamily: SANS, fontSize: 20, fontWeight: 700, color: a > 0.5 ? INK : SOFT,
++                border: `2px solid ${a > 0.5 ? INK : SOFT}`, borderRadius: 6, padding: '1px 8px',
++                transform: `scale(${1 + 0.22 * Math.sin(Math.PI * a)})`,
++              }}>{i + 1}</div>
++              <div style={{ fontFamily: SANS, fontSize: 30, fontWeight: 700, letterSpacing: '0.06em', color: INK, opacity: a }}>
++                {part.k}
++              </div>
++            </div>
++            <div style={{
++              marginTop: 6, marginLeft: 44, width: colW - 44,
++              fontFamily: SERIF, fontSize: 30, color: INK, lineHeight: 1.22, opacity: a,
++            }}>{part.v}</div>
++            <div style={{ marginTop: 10, marginLeft: 44, width: colW - 44, height: 2, background: INK, opacity: 0.22 }} />
++          </div>
++        );
++      })}
++
++      {p_.footer && (
++        <div style={{
++          position: 'absolute', left: SAFE_L, width: SAFE_W, top: 648, textAlign: 'center',
++          fontFamily: SANS, fontSize: 30, color: SOFT,
++          opacity: ease(remap(p, p_.footerAt ?? 0.88, (p_.footerAt ?? 0.88) + 0.07, 0, 1)),
++        }}>{p_.footer}</div>
++      )}
++      <SparkLine text={p_.sparkLine} />
++    </AbsoluteFill>
++  );
++};
++
++// ══════════════════════════════════════════════════════════════════════════
++// PepperAccessLadder — the argument. Four rungs of growing access; the bar
++// beside each is what MISSING CONTEXT costs at that rung. The bars grow as
++// the rungs land, and a marker shows where this tool deliberately stops.
++// ══════════════════════════════════════════════════════════════════════════
++export const pepperAccessLadderSchema = z.object({
++  beatSeconds: z.number().optional(),
++  sparkLine: z.string().default('Access raises the stakes.'),
++  axisLabel: z.string().default('COST OF THE CONTEXT IT DID NOT HAVE'),
++  rungs: z.array(z.object({
++    label: z.string(),
++    note: z.string().default(''),
++    cost: z.number(),           // 0..1 — bar width fraction
++    stop: z.boolean().optional(), // the rung this tool refuses to pass
++  })).default([]),
++  rungsAt: z.array(z.number()).default([]),
++  /** When set, every rung's label shows faint from here; each comes to full
++   *  strength, with its bar, on its own words. */
++  slotsAt: z.number().optional(),
++  footer: z.string().default(''),
++  footerAt: z.number().optional(),
++});
++export type PepperAccessLadderProps = z.infer<typeof pepperAccessLadderSchema>;
++
++export const PepperAccessLadder: React.FC<PepperAccessLadderProps> = (p_) => {
++  const p = useP();
++  const n = p_.rungs.length || 1;
++  const gap = n > 1 ? (0.70 - 0.16) / (n - 1) : 0;
++  const labelW = 430;
++  const barX = SAFE_L + labelW + 28;
++  const barMax = SAFE_R - barX - 36;
++  const headIn = ease(remap(p, 0.04, 0.12, 0, 1));
++
++  return (
++    <AbsoluteFill style={{ background: STAGE }}>
++      <div style={{
++        position: 'absolute', left: barX, top: 120, width: barMax,
++        fontFamily: SANS, fontSize: 22, letterSpacing: '0.12em', color: SOFT,
++        opacity: headIn,
++      }}>{p_.axisLabel}</div>
++      <div style={{
++        position: 'absolute', left: barX, top: 150, width: barMax, height: 2,
++        background: INK, opacity: 0.3 * headIn,
++      }} />
++
++      {p_.rungs.map((r, i) => {
++        const t0 = p_.rungsAt[i] ?? (0.16 + i * gap);
++        const a = ease(remap(p, t0, t0 + 0.09, 0, 1));
++        const g = clamp(remap(p, t0 + 0.02, t0 + 0.10, 0, 1), 0, 1);
++        const grow = g >= 1 ? 1 : 1 + 2.2 * Math.pow(g - 1, 3) + 1.2 * Math.pow(g - 1, 2); // ease-out-back
++        const y = 184 + i * 112;
++        const isStop = !!r.stop;
++        const sl = p_.slotsAt === undefined ? a
++          : ease(remap(p, p_.slotsAt + i * 0.02, p_.slotsAt + i * 0.02 + 0.06, 0, 1));
++        return (
++          <div key={i}>
++            <div style={{
++              position: 'absolute', left: SAFE_L, top: y, width: labelW,
++              opacity: Math.max(a, 0.3 * sl), transform: `translateX(${(1 - sl) * -16}px)`,
++            }}>
++              <div style={{
++                fontFamily: SERIF, fontSize: 34, color: INK, lineHeight: 1.15,
++              }}>{r.label}</div>
++              {r.note && (
++                <div style={{ fontFamily: SANS, fontSize: 22, color: SOFT, marginTop: 4 }}>{r.note}</div>
++              )}
++            </div>
++            {/* the cost bar */}
++            <div style={{
++              position: 'absolute', left: barX, top: y + 8,
++              width: Math.max(3, Math.min(barMax, barMax * clamp(r.cost, 0, 1) * grow)), height: 34,
++              background: isStop ? SPARK : INK, opacity: (isStop ? 0.95 : 0.78) * a,
++            }} />
++            {/* the stop marker — a hard ink rule BELOW the stop rung: this tool does the
++                rung, and does not cross into the next one */}
++            {isStop && (
++              <div style={{
++                position: 'absolute', left: SAFE_L, top: y + 96,
++                width: SAFE_W * a, height: 3, background: INK, opacity: 0.85,
++              }} />
++            )}
++          </div>
++        );
++      })}
++
++      {p_.footer && (
++        <div style={{
++          position: 'absolute', left: SAFE_L, width: SAFE_W, top: 640, textAlign: 'center',
++          fontFamily: SERIF, fontSize: 34, color: INK,
++          opacity: ease(remap(p, p_.footerAt ?? 0.84, (p_.footerAt ?? 0.84) + 0.08, 0, 1)),
++        }}>{p_.footer}</div>
++      )}
++      <SparkLine text={p_.sparkLine} />
++    </AbsoluteFill>
++  );
++};
++
++// ══════════════════════════════════════════════════════════════════════════
++// PepperAssumptions — the held-out block. The prompt builds above the rule;
++// everything the writer had to GUESS falls below it and stays there, dimmed
++// and outside, until a person ticks it in. Nothing crosses on its own.
++// ══════════════════════════════════════════════════════════════════════════
++export const pepperAssumptionsSchema = z.object({
++  beatSeconds: z.number().optional(),
++  sparkLine: z.string().default('What it had to guess.'),
++  promptLabel: z.string().default('GOES IN THE PROMPT'),
++  promptLines: z.array(z.string()).default([]),
++  promptAt: z.array(z.number()).default([]),
++  marker: z.string().default('===ASSUMPTIONS==='),
++  markerAt: z.number().optional(),
++  assumptionsLabel: z.string().default('NEVER INSERTED UNTIL YOU CONFIRM IT'),
++  assumptions: z.array(z.string()).default([]),
++  assumptionsAt: z.array(z.number()).default([]),
++  footer: z.string().default(''),
++  footerAt: z.number().optional(),
++});
++export type PepperAssumptionsProps = z.infer<typeof pepperAssumptionsSchema>;
++
++export const PepperAssumptions: React.FC<PepperAssumptionsProps> = (p_) => {
++  const p = useP();
++  const nP = p_.promptLines.length || 1;
++  const pGap = nP > 1 ? (0.30 - 0.08) / (nP - 1) : 0;
++  const mAt = p_.markerAt ?? 0.40;
++  const mIn = ease(remap(p, mAt, mAt + 0.08, 0, 1));
++  const nA = p_.assumptions.length || 1;
++  const aGap = nA > 1 ? (0.80 - 0.50) / (nA - 1) : 0;
++
++  return (
++    <AbsoluteFill style={{ background: STAGE }}>
++      <div style={{
++        position: 'absolute', left: SAFE_L, top: 104,
++        fontFamily: SANS, fontSize: 22, letterSpacing: '0.12em', color: SOFT,
++        opacity: ease(remap(p, 0.04, 0.10, 0, 1)),
++      }}>{p_.promptLabel}</div>
++
++      {p_.promptLines.map((l, i) => {
++        const t0 = p_.promptAt[i] ?? (0.08 + i * pGap);
++        const a = ease(remap(p, t0, t0 + 0.07, 0, 1));
++        return (
++          <div key={i} style={{
++            position: 'absolute', left: SAFE_L, width: SAFE_W, top: 140 + i * 56,
++            fontFamily: MONO, fontSize: 32, color: INK,
++            opacity: a, transform: `translateX(${(1 - a) * -12}px)`,
++          }}>{l}</div>
++        );
++      })}
++
++      {/* the marker rule — the whole contract in one line of type */}
++      <div style={{
++        position: 'absolute', left: SAFE_L, width: SAFE_W, top: 148 + nP * 56,
++        opacity: mIn,
++      }}>
++        <div style={{ height: 3, background: SPARK, width: SAFE_W }} />
++        <div style={{
++          fontFamily: MONO, fontSize: 32, color: SPARK, marginTop: 10, letterSpacing: '0.04em',
++        }}>{p_.marker}</div>
++        <div style={{ fontFamily: SANS, fontSize: 22, letterSpacing: '0.12em', color: SOFT, marginTop: 6 }}>
++          {p_.assumptionsLabel}
++        </div>
++      </div>
++
++      {p_.assumptions.map((l, i) => {
++        const t0 = p_.assumptionsAt[i] ?? (0.50 + i * aGap);
++        const a = ease(remap(p, t0, t0 + 0.08, 0, 1));
++        return (
++          <div key={i} style={{
++            position: 'absolute', left: SAFE_L + 26, width: SAFE_W - 26,
++            top: 232 + nP * 56 + i * 52,
++            display: 'flex', alignItems: 'center', gap: 18,
++            opacity: a, transform: `translateY(${(1 - a) * -10}px)`,
++          }}>
++            <div style={{ width: 26, height: 26, flexShrink: 0, border: `3px solid ${SOFT}`, borderRadius: 5 }} />
++            <div style={{ fontFamily: SERIF, fontSize: 34, color: SOFT }}>{l}</div>
++          </div>
++        );
++      })}
++
++      {p_.footer && (
++        <div style={{
++          position: 'absolute', left: SAFE_L, width: SAFE_W, top: 640, textAlign: 'center',
++          fontFamily: SERIF, fontSize: 30, color: INK,
++          opacity: ease(remap(p, p_.footerAt ?? 0.88, (p_.footerAt ?? 0.88) + 0.07, 0, 1)),
++        }}>{p_.footer}</div>
++      )}
++      <SparkLine text={p_.sparkLine} pos="top" />
++    </AbsoluteFill>
++  );
++};
++
++// ══════════════════════════════════════════════════════════════════════════
++// PepperAlternatives — three columns that arrive in order. Each carries the
++// product's OWN words and, beneath an ink rule, the one thing it does not do.
++// The third column's gap line is the only terracotta on the frame.
++// ══════════════════════════════════════════════════════════════════════════
++export const pepperAlternativesSchema = z.object({
++  beatSeconds: z.number().optional(),
++  sparkLine: z.string().default('Two I actually looked at.'),
++  columns: z.array(z.object({
++    name: z.string(),
++    source: z.string().default(''),
++    quote: z.string().default(''),
++    gap: z.string().default(''),
++    mine: z.boolean().optional(),
++  })).default([]),
++  columnsAt: z.array(z.number()).default([]),
++  /** Start fraction per gap line, aligned to the spoken contrast. */
++  gapsAt: z.array(z.number()).default([]),
++  footer: z.string().default(''),
++  footerAt: z.number().optional(),
++});
++export type PepperAlternativesProps = z.infer<typeof pepperAlternativesSchema>;
++
++export const PepperAlternatives: React.FC<PepperAlternativesProps> = (p_) => {
++  const p = useP();
++  const n = p_.columns.length || 1;
++  const gapT = n > 1 ? (0.62 - 0.12) / (n - 1) : 0;
++  const gutter = 34;
++  const colW = Math.floor((SAFE_W - gutter * (n - 1)) / n);
++
++  return (
++    <AbsoluteFill style={{ background: STAGE }}>
++      {p_.columns.map((c, i) => {
++        const t0 = p_.columnsAt[i] ?? (0.12 + i * gapT);
++        const a = ease(remap(p, t0, t0 + 0.10, 0, 1));
++        const g0 = p_.gapsAt[i] ?? (t0 + 0.08);
++        const gIn = ease(remap(p, g0, g0 + 0.10, 0, 1));
++        const x = SAFE_L + i * (colW + gutter);
++        return (
++          <div key={i}>
++            <div style={{
++              position: 'absolute', left: x, top: 118, width: colW, height: 124,
++              display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
++              opacity: a, transform: `translateY(${(1 - a) * 14}px)`,
++            }}>
++              <div style={{
++                fontFamily: SANS, fontSize: 28, fontWeight: 700, color: INK, lineHeight: 1.2,
++              }}>{c.name}</div>
++              {c.source && (
++                <div style={{ fontFamily: SANS, fontSize: 22, color: SOFT, marginTop: 4 }}>{c.source}</div>
++              )}
++            </div>
++            <div style={{
++              position: 'absolute', left: x, top: 252, width: colW,
++              opacity: a, transform: `translateY(${(1 - a) * 14}px)`,
++            }}>
++              <div style={{ height: 2, background: INK, opacity: 0.28, width: colW * a }} />
++              <div style={{
++                fontFamily: SERIF, fontSize: 30, color: INK, marginTop: 14, lineHeight: 1.24,
++              }}>{c.quote}</div>
++            </div>
++            {/* the gap line, under a second rule — what it does not do */}
++            <div style={{
++              position: 'absolute', left: x, top: 452, width: colW, opacity: gIn,
++            }}>
++              <div style={{ height: 3, background: c.mine ? SPARK : INK, opacity: c.mine ? 0.95 : 0.3, width: colW * gIn }} />
++              <div style={{
++                fontFamily: SERIF, fontSize: 30, marginTop: 14, lineHeight: 1.24,
++                color: c.mine ? INK : SOFT,
++                fontWeight: c.mine ? 700 : 400,
++              }}>{c.gap}</div>
++            </div>
++          </div>
++        );
++      })}
++
++      {p_.footer && (
++        <div style={{
++          position: 'absolute', left: SAFE_L, width: SAFE_W, top: 648, textAlign: 'center',
++          fontFamily: SANS, fontSize: 28, color: SOFT,
++          opacity: ease(remap(p, p_.footerAt ?? 0.86, (p_.footerAt ?? 0.86) + 0.08, 0, 1)),
++        }}>{p_.footer}</div>
++      )}
++      <SparkLine text={p_.sparkLine} />
++    </AbsoluteFill>
++  );
++};
++
++// ══════════════════════════════════════════════════════════════════════════
++// PepperScreenshot — a REAL screenshot, never a mock-up, moved by a camera.
++// The camera walks between rectangles given in the image's own pixels, and a
++// terracotta ring marks the region the narration is about. The caption
++// carries the provenance — where the image came from and when — on screen.
++//
++// GATE L: `./art scenes` returned no component for a real screenshot with a
++// camera move to a named region (HaiExplainerFig3Command is a "house-style
++// mock (not a screenshot)"), so this is a logged PUNT.
++// The pixels are the captured application's. Nothing is redrawn over the
++// image except the ring, which is outside the image's own UI.
++// ══════════════════════════════════════════════════════════════════════════
++const rectZ = z.object({ x: z.number(), y: z.number(), w: z.number(), h: z.number() });
++type Rect = z.infer<typeof rectZ>;
++
++export const pepperScreenshotSchema = z.object({
++  beatSeconds: z.number().optional(),
++  sparkLine: z.string().default('The real panel.'),
++  src: z.string().default('pepper/panel-result-model-2026-10-10.png'),
++  imgW: z.number().default(1280),
++  imgH: z.number().default(860),
++  /** Camera keyframes: the image-pixel rect that fills the window from `at`. */
++  shots: z.array(z.object({ at: z.number(), rect: rectZ })).default([]),
++  /** Rings drawn around image-pixel rects, from `at` until `until` (default: end). */
++  rings: z.array(z.object({ at: z.number(), until: z.number().optional(), rect: rectZ })).default([]),
++  caption: z.string().default(''),
++});
++export type PepperScreenshotProps = z.infer<typeof pepperScreenshotSchema>;
++
++const VX = SAFE_L, VY = 100, VW = SAFE_W, VH = 522;
++const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
++
++export const PepperScreenshot: React.FC<PepperScreenshotProps> = (p_) => {
++  const p = useP();
++  const full: Rect = { x: 0, y: 0, w: p_.imgW, h: p_.imgH };
++  const shots = p_.shots.length ? p_.shots : [{ at: 0, rect: full }];
++
++  // camera: hold each shot, ease into the next over 0.07 of the beat
++  let cam: Rect = shots[0].rect;
++  for (let i = 1; i < shots.length; i++) {
++    const t = ease(remap(p, shots[i].at, shots[i].at + 0.07, 0, 1));
++    if (t <= 0) break;
++    const a = cam, b = shots[i].rect;
++    cam = { x: lerp(a.x, b.x, t), y: lerp(a.y, b.y, t), w: lerp(a.w, b.w, t), h: lerp(a.h, b.h, t) };
++  }
++  const drift = 1 + 0.025 * p;                       // ~2.5% push across the beat
++  const s = Math.min(VW / cam.w, VH / cam.h) * drift;
++  const ox = VX + VW / 2 - (cam.x + cam.w / 2) * s;
++  const oy = VY + VH / 2 - (cam.y + cam.h / 2) * s;
++  const inIn = ease(remap(p, 0.0, 0.05, 0, 1));
++
++  return (
++    <AbsoluteFill style={{ background: STAGE }}>
++      {/* the window — clips the image to the viewport */}
++      <div style={{
++        position: 'absolute', left: VX, top: VY, width: VW, height: VH, overflow: 'hidden',
++        border: `3px solid ${INK}`, borderRadius: 10, background: '#212121', opacity: inIn,
++      }}>
++        <Img src={staticFile(p_.src)} style={{
++          position: 'absolute', left: ox - VX - 3, top: oy - VY - 3,
++          width: p_.imgW * s, height: p_.imgH * s,
++        }} />
++        {p_.rings.map((r, i) => {
++          const a = ease(remap(p, r.at, r.at + 0.05, 0, 1)) * (1 - ease(remap(p, r.until ?? 2, (r.until ?? 2) + 0.04, 0, 1)));
++          const pad = 6;
++          return (
++            <div key={i} style={{
++              position: 'absolute',
++              left: ox - VX - 3 + r.rect.x * s - pad, top: oy - VY - 3 + r.rect.y * s - pad,
++              width: r.rect.w * s + pad * 2, height: r.rect.h * s + pad * 2,
++              border: `5px solid ${SPARK}`, borderRadius: 10, opacity: a,
++            }} />
++          );
++        })}
++      </div>
++
++      {p_.caption && (
++        <div style={{
++          position: 'absolute', left: SAFE_L, width: SAFE_W, top: 640, textAlign: 'center',
++          fontFamily: SANS, fontSize: 24, color: SOFT, opacity: inIn,
++        }}>{p_.caption}</div>
++      )}
++      <SparkLine text={p_.sparkLine} />
++    </AbsoluteFill>
++  );
++};
+diff --git a/runtime/remotion/src/Root.tsx b/runtime/remotion/src/Root.tsx
+index 4c0c780..63183d8 100644
+--- a/runtime/remotion/src/Root.tsx
++++ b/runtime/remotion/src/Root.tsx
+@@ -170,6 +170,15 @@ import {
+   DescartesChecklist, descartesChecklistSchema,
+   DescartesLedger, descartesLedgerSchema,
+ } from './DescartesIllu';
++// ── pepper-context-and-access — context/access figures ──
++import {
++  PepperSixParts, pepperSixPartsSchema,
++  PepperAccessLadder, pepperAccessLadderSchema,
++  PepperAssumptions, pepperAssumptionsSchema,
++  PepperAlternatives, pepperAlternativesSchema,
++  PepperScreenshot, pepperScreenshotSchema,
++} from './PepperIllu';
++import {PortfolioTitleOutro, portfolioTitleOutroSchema} from './scenes/PortfolioTitleOutro';
+ // ── claude-liam — math-of-being-afraid-together figures ──
+ import {HorrorParadox, horrorParadoxSchema} from './scenes/HorrorParadox';
+ import {HorrorAxiom, horrorAxiomSchema} from './scenes/HorrorAxiom';
+@@ -2273,6 +2282,37 @@ export const RemotionRoot: React.FC = () => {
+         calculateMetadata={beatMeta}
+         schema={descartesLedgerSchema}
+         defaultProps={descartesLedgerSchema.parse({})} />
++      {/* ── pepper-context-and-access — "What It Had to Guess" figures ── */}
++      <Composition id="PepperSixParts" component={PepperSixParts}
++        durationInFrames={900} fps={30} width={1280} height={720}
++        calculateMetadata={beatMeta}
++        schema={pepperSixPartsSchema}
++        defaultProps={pepperSixPartsSchema.parse({})} />
++      <Composition id="PepperAccessLadder" component={PepperAccessLadder}
++        durationInFrames={900} fps={30} width={1280} height={720}
++        calculateMetadata={beatMeta}
++        schema={pepperAccessLadderSchema}
++        defaultProps={pepperAccessLadderSchema.parse({})} />
++      <Composition id="PepperAssumptions" component={PepperAssumptions}
++        durationInFrames={900} fps={30} width={1280} height={720}
++        calculateMetadata={beatMeta}
++        schema={pepperAssumptionsSchema}
++        defaultProps={pepperAssumptionsSchema.parse({})} />
++      <Composition id="PepperAlternatives" component={PepperAlternatives}
++        durationInFrames={900} fps={30} width={1280} height={720}
++        calculateMetadata={beatMeta}
++        schema={pepperAlternativesSchema}
++        defaultProps={pepperAlternativesSchema.parse({})} />
++      <Composition id="PepperScreenshot" component={PepperScreenshot}
++        durationInFrames={900} fps={30} width={1280} height={720}
++        calculateMetadata={beatMeta}
++        schema={pepperScreenshotSchema}
++        defaultProps={pepperScreenshotSchema.parse({})} />
++      <Composition id="PortfolioTitleOutro" component={PortfolioTitleOutro}
++        durationInFrames={180} fps={30} width={1920} height={1080}
++        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? (props as any).beatSeconds ?? 6) * 30)})}
++        schema={portfolioTitleOutroSchema}
++        defaultProps={portfolioTitleOutroSchema.parse({})} />
+       <Composition id="ClaudeScienceChipGrid" component={ClaudeScienceChipGrid}
+         durationInFrames={900} fps={30} width={1280} height={720}
+         schema={claudeScienceChipGridSchema}
+diff --git a/runtime/remotion/src/scenes.json b/runtime/remotion/src/scenes.json
+index 33bc5f4..cad7572 100644
+--- a/runtime/remotion/src/scenes.json
++++ b/runtime/remotion/src/scenes.json
+@@ -1,6 +1,6 @@
+ {
+  "_note": "RENDERABLE scenes only \u2014 generated from Root.tsx <Composition> ids. A .tsx file in scenes/ that no Composition references cannot render. Regenerate with build_scene_index.py after adding a component. desc_source=derived means the component has NO header: the text is assembled from file evidence (name, folder, props, defaultProps copy) and is a search aid only \u2014 open the file before trusting it.",
+- "count": 653,
++ "count": 659,
+  "undocumented": 118,
+  "unresolved": 0,
+  "scenes": [
+@@ -9446,7 +9446,9 @@
+     "claim",
+     "question",
+     "conditions",
+-    "footer"
++    "footer",
++    "conditionsAt",
++    "footerAt"
+    ],
+    "aspect": "16:9",
+    "documented": true,
+@@ -9459,6 +9461,7 @@
+     "claude-liam-descartes-doubt",
+     "condition",
+     "conditions",
++    "conditionsat",
+     "correction",
+     "descartes",
+     "descartesillu",
+@@ -9466,6 +9469,7 @@
+     "engineering",
+     "figures",
+     "footer",
++    "footerat",
+     "found",
+     "gate",
+     "inspection",
+@@ -9501,7 +9505,13 @@
+     "rightLabel",
+     "leftLines",
+     "rightLines",
+-    "gapLine"
++    "gapLine",
++    "intro",
++    "introAt",
++    "leftAt",
++    "rightAt",
++    "gapAt",
++    "strikeLeft"
+    ],
+    "aspect": "16:9",
+    "documented": true,
+@@ -9520,10 +9530,15 @@
+     "engineering",
+     "figures",
+     "found",
++    "gapat",
+     "gapline",
+     "gate",
+     "inspection",
++    "intro",
++    "introat",
+     "label",
++    "left",
++    "leftat",
+     "leftlabel",
+     "leftlines",
+     "line",
+@@ -9534,12 +9549,14 @@
+     "radical",
+     "radical-doubt",
+     "rhetorical",
++    "rightat",
+     "rightlabel",
+     "rightlines",
+     "seconds",
+     "slated",
+     "sparkline",
+     "split",
++    "strikeleft",
+     "these",
+     "true",
+     "written"
+@@ -9559,13 +9576,16 @@
+     "before",
+     "beforeNote",
+     "parts",
+-    "after"
++    "after",
++    "partsAt",
++    "afterAt"
+    ],
+    "aspect": "16:9",
+    "documented": true,
+    "desc_source": "header",
+    "synonyms": [
+     "after",
++    "afterat",
+     "artifact-vs-world",
+     "beatseconds",
+     "before",
+@@ -9587,6 +9607,7 @@
+     "logged",
+     "note",
+     "parts",
++    "partsat",
+     "protocol",
+     "punt",
+     "radical",
+@@ -9614,7 +9635,9 @@
+     "sparkLine",
+     "rows",
+     "footer",
+-    "unticked"
++    "unticked",
++    "rowsAt",
++    "footerAt"
+    ],
+    "aspect": "16:9",
+    "documented": true,
+@@ -9634,6 +9657,7 @@
+     "engineering",
+     "figures",
+     "footer",
++    "footerat",
+     "found",
+     "gate",
+     "inspection",
+@@ -9645,6 +9669,7 @@
+     "radical-doubt",
+     "rhetorical",
+     "rows",
++    "rowsat",
+     "seconds",
+     "slated",
+     "sparkline",
+@@ -9669,7 +9694,9 @@
+     "claim",
+     "rows",
+     "closing",
+-    "source"
++    "source",
++    "rowsAt",
++    "count"
+    ],
+    "aspect": "16:9",
+    "documented": true,
+@@ -9683,6 +9710,7 @@
+     "closing",
+     "condition",
+     "correction",
++    "count",
+     "descartes",
+     "descartesillu",
+     "descartesledger",
+@@ -9700,6 +9728,7 @@
+     "radical-doubt",
+     "rhetorical",
+     "rows",
++    "rowsat",
+     "seconds",
+     "slated",
+     "source",
+@@ -9710,12 +9739,362 @@
+     "written"
+    ]
+   },
++  {
++   "id": "PepperSixParts",
++   "component": "PepperSixParts",
++   "file": "PepperIllu.tsx",
++   "folder": "",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
++   "desc": "PepperIllu.tsx \u2014 figures for pepper-context-and-access (\"What It Had to Guess\"). GATE L note: `./art scenes` was run for every beat before authoring. It returned no component for (a) a rough request expanding into six labelled prompt sections, (b) an access ladder where the cost of missing context grows with permission",
++   "when": "",
++   "props": [
++    "beatSeconds",
++    "sparkLine",
++    "rough",
++    "roughLabel",
++    "roughAt",
++    "parts",
++    "partsAt",
++    "footer",
++    "footerAt"
++   ],
++   "aspect": "16:9",
++   "documented": true,
++   "desc_source": "header",
++   "synonyms": [
++    "access",
++    "authoring",
++    "beat",
++    "beatseconds",
++    "context",
++    "cost",
++    "expanding",
++    "figures",
++    "footer",
++    "footerat",
++    "gate",
++    "grows",
++    "guess",
++    "held-out",
++    "label",
++    "labelled",
++    "ladder",
++    "line",
++    "missing",
++    "parts",
++    "partsat",
++    "pepper",
++    "pepper-context-and-access",
++    "pepperillu",
++    "peppersixparts",
++    "permission",
++    "prompt",
++    "request",
++    "returned",
++    "rough",
++    "roughat",
++    "roughlabel",
++    "seconds",
++    "sections",
++    "six",
++    "sparkline"
++   ]
++  },
++  {
++   "id": "PepperAccessLadder",
++   "component": "PepperAccessLadder",
++   "file": "PepperIllu.tsx",
++   "folder": "",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
++   "desc": "PepperIllu.tsx \u2014 figures for pepper-context-and-access (\"What It Had to Guess\"). GATE L note: `./art scenes` was run for every beat before authoring. It returned no component for (a) a rough request expanding into six labelled prompt sections, (b) an access ladder where the cost of missing context grows with permission",
++   "when": "",
++   "props": [
++    "beatSeconds",
++    "sparkLine",
++    "axisLabel",
++    "rungs",
++    "rungsAt",
++    "footer",
++    "footerAt"
++   ],
++   "aspect": "16:9",
++   "documented": true,
++   "desc_source": "header",
++   "synonyms": [
++    "access",
++    "authoring",
++    "axislabel",
++    "beat",
++    "beatseconds",
++    "context",
++    "cost",
++    "expanding",
++    "figures",
++    "footer",
++    "footerat",
++    "gate",
++    "grows",
++    "guess",
++    "held-out",
++    "label",
++    "labelled",
++    "ladder",
++    "line",
++    "missing",
++    "pepper",
++    "pepper-context-and-access",
++    "pepperaccessladder",
++    "pepperillu",
++    "permission",
++    "prompt",
++    "request",
++    "returned",
++    "rough",
++    "rungs",
++    "rungsat",
++    "seconds",
++    "sections",
++    "sparkline"
++   ]
++  },
++  {
++   "id": "PepperAssumptions",
++   "component": "PepperAssumptions",
++   "file": "PepperIllu.tsx",
++   "folder": "",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
++   "desc": "PepperIllu.tsx \u2014 figures for pepper-context-and-access (\"What It Had to Guess\"). GATE L note: `./art scenes` was run for every beat before authoring. It returned no component for (a) a rough request expanding into six labelled prompt sections, (b) an access ladder where the cost of missing context grows with permission",
++   "when": "",
++   "props": [
++    "beatSeconds",
++    "sparkLine",
++    "promptLabel",
++    "promptLines",
++    "promptAt",
++    "marker",
++    "markerAt",
++    "assumptionsLabel",
++    "assumptions",
++    "assumptionsAt",
++    "footer",
++    "footerAt"
++   ],
++   "aspect": "16:9",
++   "documented": true,
++   "desc_source": "header",
++   "synonyms": [
++    "access",
++    "assumptions",
++    "assumptionsat",
++    "assumptionslabel",
++    "authoring",
++    "beat",
++    "beatseconds",
++    "context",
++    "cost",
++    "expanding",
++    "figures",
++    "footer",
++    "footerat",
++    "gate",
++    "grows",
++    "guess",
++    "held-out",
++    "label",
++    "labelled",
++    "ladder",
++    "line",
++    "lines",
++    "marker",
++    "markerat",
++    "missing",
++    "pepper",
++    "pepper-context-and-access",
++    "pepperassumptions",
++    "pepperillu",
++    "permission",
++    "prompt",
++    "promptat",
++    "promptlabel",
++    "promptlines",
++    "request",
++    "returned",
++    "rough",
++    "seconds",
++    "sections",
++    "sparkline"
++   ]
++  },
++  {
++   "id": "PepperAlternatives",
++   "component": "PepperAlternatives",
++   "file": "PepperIllu.tsx",
++   "folder": "",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
++   "desc": "PepperIllu.tsx \u2014 figures for pepper-context-and-access (\"What It Had to Guess\"). GATE L note: `./art scenes` was run for every beat before authoring. It returned no component for (a) a rough request expanding into six labelled prompt sections, (b) an access ladder where the cost of missing context grows with permission",
++   "when": "",
++   "props": [
++    "beatSeconds",
++    "sparkLine",
++    "columns",
++    "columnsAt",
++    "gapsAt",
++    "footer",
++    "footerAt"
++   ],
++   "aspect": "16:9",
++   "documented": true,
++   "desc_source": "header",
++   "synonyms": [
++    "access",
++    "alternatives",
++    "authoring",
++    "beat",
++    "beatseconds",
++    "columns",
++    "columnsat",
++    "context",
++    "cost",
++    "expanding",
++    "figures",
++    "footer",
++    "footerat",
++    "gapsat",
++    "gate",
++    "grows",
++    "guess",
++    "held-out",
++    "labelled",
++    "ladder",
++    "line",
++    "missing",
++    "pepper",
++    "pepper-context-and-access",
++    "pepperalternatives",
++    "pepperillu",
++    "permission",
++    "prompt",
++    "request",
++    "returned",
++    "rough",
++    "seconds",
++    "sections",
++    "sparkline"
++   ]
++  },
++  {
++   "id": "PepperScreenshot",
++   "component": "PepperScreenshot",
++   "file": "PepperIllu.tsx",
++   "folder": "",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
++   "desc": "PepperIllu.tsx \u2014 figures for pepper-context-and-access (\"What It Had to Guess\"). GATE L note: `./art scenes` was run for every beat before authoring. It returned no component for (a) a rough request expanding into six labelled prompt sections, (b) an access ladder where the cost of missing context grows with permission",
++   "when": "",
++   "props": [
++    "beatSeconds",
++    "sparkLine",
++    "src",
++    "imgW",
++    "imgH",
++    "shots",
++    "rings",
++    "caption"
++   ],
++   "aspect": "16:9",
++   "documented": true,
++   "desc_source": "header",
++   "synonyms": [
++    "access",
++    "authoring",
++    "beat",
++    "beatseconds",
++    "caption",
++    "context",
++    "cost",
++    "expanding",
++    "figures",
++    "gate",
++    "grows",
++    "guess",
++    "held-out",
++    "imgh",
++    "imgw",
++    "labelled",
++    "ladder",
++    "line",
++    "missing",
++    "pepper",
++    "pepper-context-and-access",
++    "pepperillu",
++    "pepperscreenshot",
++    "permission",
++    "prompt",
++    "request",
++    "returned",
++    "rings",
++    "rough",
++    "screenshot",
++    "seconds",
++    "sections",
++    "shots",
++    "sparkline"
++   ]
++  },
++  {
++   "id": "PortfolioTitleOutro",
++   "component": "PortfolioTitleOutro",
++   "file": "scenes\\PortfolioTitleOutro.tsx",
++   "folder": "",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
++   "desc": "Title-restate outro card for reels that are NOT @NikBearBrown channel reels. WHY THIS EXISTS. `ClaudeTitleOutro` is the right shape \u2014 poster serif title restate, terracotta terminal punctuation, handle beneath \u2014 but OUTRO-LOCK.md hardcodes its handle to '@NikBearBrown' with \"no prop, no lookup, no override\".",
++   "when": "",
++   "props": [
++    "title",
++    "handle",
++    "slug",
++    "beatSeconds"
++   ],
++   "aspect": "16:9",
++   "documented": true,
++   "desc_source": "header",
++   "synonyms": [
++    "beatseconds",
++    "beneath",
++    "card",
++    "channel",
++    "claudetitleoutro",
++    "exists",
++    "figures",
++    "guess",
++    "handle",
++    "hardcodes",
++    "nikbearbrown",
++    "outro",
++    "outro-lock",
++    "pepper-context-and-access",
++    "portfolio",
++    "portfoliotitleoutro",
++    "poster",
++    "punctuation",
++    "reels",
++    "restate",
++    "right",
++    "seconds",
++    "serif",
++    "shape",
++    "slug",
++    "terminal",
++    "terracotta",
++    "title",
++    "title-restate"
++   ]
++  },
+   {
+    "id": "ClaudeScienceChipGrid",
+    "component": "ClaudeScienceChipGrid",
+    "file": "ClaudeScienceIllu.tsx",
+    "folder": "",
+-   "group": "claude-liam-descartes-doubt \u2014 radical-doubt figures",
++   "group": "pepper-context-and-access \u2014 \"What It Had to Guess\" figures",
+    "desc": "ClaudeScienceIllu.tsx \u2014 parameterized wrappers for the structural illustration family, registered as Remotion Compositions for the claude-liam-claude-science reel. Each wrapper accepts a `sparkLine` prop (the IlluStage header text) plus the props of the underlying structural component.",
+    "when": "",
+    "props": [
+@@ -9734,7 +10113,6 @@
+     "chip",
+     "claude",
+     "claude-liam-claude-science",
+-    "claude-liam-descartes-doubt",
+     "claudesciencechipgrid",
+     "claudescienceillu",
+     "cols",
+@@ -9743,6 +10121,7 @@
+     "figures",
+     "geometry",
+     "grid",
++    "guess",
+     "header",
+     "illustage",
+     "illustration",
+@@ -9750,9 +10129,9 @@
+     "line",
+     "match",
+     "parameterized",
++    "pepper-context-and-access",
+     "pixel",
+     "plus",
+-    "radical-doubt",
+     "reel",
+     "registered",
+     "science",
+diff --git a/runtime/remotion/src/scenes/ClaudeComposerAsk.tsx b/runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+index 76cfa39..7ab5baf 100644
+--- a/runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
++++ b/runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+@@ -44,6 +44,12 @@ export const claudeComposerAskSchema = z.object({
+   placeholder: z.string().default('Type / for skills'),
+   animateTyping: z.boolean().optional(),
+   largeText: z.boolean().optional(),
++  /** Optional timing as fractions of the beat, so typing and output land on
++   *  the narration. Omitted = the fixed frame timing used everywhere else. */
++  typeAt: z.number().optional(),
++  typeDur: z.number().optional(),
++  runAt: z.number().optional(),
++  outputAt: z.array(z.number()).optional(),
+ });
+ export type ClaudeComposerAskProps = z.infer<typeof claudeComposerAskSchema>;
+ 
+@@ -51,9 +57,11 @@ export type ClaudeComposerAskProps = z.infer<typeof claudeComposerAskSchema>;
+ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
+   command, topic, segment, greeting, runningText, output, folderLabel,
+   modelLabel, effortLabel, placeholder, animateTyping = true, largeText = false,
++  typeAt, typeDur, runAt, outputAt,
+ }) => {
+   const frame = useCurrentFrame();
+-  const {fps, width, height} = useVideoConfig();
++  const {fps, width, height, durationInFrames} = useVideoConfig();
++  const F = (f: number) => Math.round(f * durationInFrames);
+   const portrait = height > width;
+ 
+   const PAD_X = width * 0.08;
+@@ -64,8 +72,8 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
+   const segIn   = spring({frame: frame - 4, fps, config: SPRING_SMOOTH});
+   const cardIn  = spring({frame: frame - 8, fps, config: SPRING_SMOOTH});
+ 
+-  const TYPE_START = 18;
+-  const TYPE_DUR   = 45;
++  const TYPE_START = typeAt !== undefined ? F(typeAt) : 18;
++  const TYPE_DUR   = typeDur !== undefined ? Math.max(6, F(typeDur)) : 45;
+   const charsShown = !animateTyping ? command.length : Math.min(
+     command.length,
+     Math.max(0, Math.floor(((frame - TYPE_START) / TYPE_DUR) * command.length)),
+@@ -77,7 +85,7 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
+   const typed = command.slice(0, charsShown);
+   const slashMatch = typed.match(/^(\/\S*)([\s\S]*)$/);
+ 
+-  const RUN_START = TYPE_START + TYPE_DUR + 8;
++  const RUN_START = runAt !== undefined ? F(runAt) : TYPE_START + TYPE_DUR + 8;
+   const runningOpacity = interpolate(frame, [RUN_START + 6, RUN_START + 12], [0, 1], {
+     extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+   });
+@@ -266,8 +274,11 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
+ 
+         {/* Optional output lines */}
+         {output && output.map((line, i) => {
+-          const lineStart = RUN_START + 18 + i * 10;
+-          const lineOpacity = interpolate(frame, [lineStart, lineStart + 6], [0, 1], {
++          const lineStart = outputAt?.[i] !== undefined ? F(outputAt[i]) : RUN_START + 18 + i * 10;
++          const lineOpacity = interpolate(frame, [lineStart, lineStart + 8], [0, 1], {
++            extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
++          });
++          const lineRise = interpolate(frame, [lineStart, lineStart + 10], [6, 0], {
+             extrapolateLeft: 'clamp', extrapolateRight: 'clamp',
+           });
+           return (
+@@ -279,6 +290,7 @@ export const ClaudeComposerAsk: React.FC<ClaudeComposerAskProps> = ({
+               whiteSpace: 'pre-wrap',
+               overflowWrap: 'break-word',
+               opacity: lineOpacity,
++              transform: `translateY(${lineRise}px)`,
+             }}>
+               {line}
+             </div>
+diff --git a/runtime/remotion/src/scenes/PortfolioTitleOutro.tsx b/runtime/remotion/src/scenes/PortfolioTitleOutro.tsx
+new file mode 100644
+index 0000000..3b92115
+--- /dev/null
++++ b/runtime/remotion/src/scenes/PortfolioTitleOutro.tsx
+@@ -0,0 +1,101 @@
++import React from 'react';
++import { AbsoluteFill, useCurrentFrame, interpolate } from 'remotion';
++import { z } from 'zod';
++import { CLAUDE, CLAUDE_FONT } from '../tokens/claude';
++
++/**
++ * PortfolioTitleOutro — title-restate outro card for reels that are NOT
++ * @NikBearBrown channel reels.
++ *
++ * WHY THIS EXISTS. `ClaudeTitleOutro` is the right shape — poster serif title
++ * restate, terracotta terminal punctuation, handle beneath — but OUTRO-LOCK.md
++ * hardcodes its handle to '@NikBearBrown' with "no prop, no lookup, no
++ * override". A coursework portfolio film must carry its own author's credit
++ * and must not carry an instructor's. `./art scenes "title restate outro card
++ * with a handle"` returned ClaudeTitleOutro (locked) and MusiniqueOutroCard
++ * (artist-attribution, wrong shape), so this is a logged PUNT.
++ *
++ * It keeps every part of the lock that is about the LOOK — exact title
++ * restate, poster serif, terracotta period, handle beneath, no subline, the
++ * two QC fill anchors — and changes only the part that is about WHOSE channel
++ * it is. It draws no mascot, so PIXEL-ART LAW has nothing to bind here: grep
++ * this file for `rotate` and it is zero because there are no rects to rotate.
++ *
++ * Polarity is slug-seeded exactly as the lock does it, so the card still
++ * varies across reels and is still deterministic per reel.
++ */
++
++function seedHash(s: string): number {
++  return Array.from(s || 'default').reduce((acc, c) => acc + c.charCodeAt(0), 0);
++}
++
++export const portfolioTitleOutroSchema = z.object({
++  // Production beat sheets MUST set this to the video's title verbatim.
++  title: z.string().default('⚠ SET IN BEAT SHEET'),
++  // The author's own handle or name. Required — this component exists so that
++  // it is a prop. Never default it to a channel.
++  handle: z.string().default('⚠ SET IN BEAT SHEET'),
++  // slug seeds the light/dark polarity, as in OUTRO-LOCK.md §Randomness.
++  slug: z.string().default(''),
++  beatSeconds: z.number().optional(),
++});
++export type PortfolioTitleOutroProps = z.infer<typeof portfolioTitleOutroSchema>;
++
++const SERIF = CLAUDE_FONT.serif;
++const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
++
++export const PortfolioTitleOutro: React.FC<PortfolioTitleOutroProps> = ({ title, handle, slug }) => {
++  const frame = useCurrentFrame();
++  const o = clamp(interpolate(frame, [0, 14], [0, 1]), 0, 1);
++
++  // Terminal punctuation in terracotta — the one accent on the card.
++  const _pm = title.match(/^([\s\S]*?)\s*([.?!…]+)\s*$/);
++  const titleBody = _pm ? _pm[1] : title;
++  const titlePunct = _pm ? _pm[2] : '.';
++
++  const seed = seedHash(slug || title);
++  const isDark = seed % 2 === 1;
++  const bg = isDark ? CLAUDE.INK : CLAUDE.PAGE;
++  const fg = isDark ? CLAUDE.PAGE : CLAUDE.INK;
++  const fgSend = isDark ? CLAUDE.PAGE : CLAUDE.SEND;
++
++  return (
++    <AbsoluteFill style={{
++      background: bg,
++      alignItems: 'center',
++      justifyContent: 'center',
++      flexDirection: 'column',
++      opacity: o,
++    }}>
++      {/* QC fill anchors — see ClaudeTitleOutro; bottom anchor clears the
++          burn-in exclusion strip at y = 0.94 × 1080. */}
++      <div style={{ position: 'absolute', left: 96, top: 54, width: 3, height: 3, background: '#D4D4D4' }} />
++      <div style={{ position: 'absolute', right: 96, bottom: 123, width: 3, height: 3, background: '#D4D4D4' }} />
++
++      <div style={{
++        fontFamily: SERIF,
++        fontWeight: 700,
++        fontSize: 72,
++        color: fg,
++        letterSpacing: '-0.02em',
++        textAlign: 'center',
++        lineHeight: 1.08,
++        maxWidth: 1080,
++        padding: '0 60px',
++      }}>
++        {titleBody}
++        <span style={{ color: fgSend }}>{titlePunct}</span>
++      </div>
++
++      <div style={{
++        fontFamily: SERIF,
++        fontSize: 52,
++        color: fg,
++        marginTop: 28,
++        opacity: 0.9,
++      }}>
++        {handle}
++      </div>
++    </AbsoluteFill>
++  );
++};
+diff --git a/runtime/scripts/compile.py b/runtime/scripts/compile.py
+index 9f9ae15..257e5a3 100644
+--- a/runtime/scripts/compile.py
++++ b/runtime/scripts/compile.py
+@@ -696,6 +696,14 @@ def compile_reel(a):
+     audio, akind = build_master_audio(folder, beats, a.audio, work)
+     atomic_json(writable_path(folder, 'build-state.json'), {'status': 'rendering'})
+ 
++    # Opt-in crossfade (see the assembly below). The per-clip head/tail dip is
++    # off in that mode, and the mode is part of the cache key.
++    global FADE_S
++    _tr = (sheet.get("metadata", {}) or {}).get("transition") or {}
++    xfade_d = float(_tr.get("duration", 0) or 0) if _tr.get("type") == "crossfade" else 0.0
++    xfade_style = str(_tr.get("style", "fade"))
++    if xfade_d > 0:
++        FADE_S = 0.0
+     report, t0 = [], 0.0
+     for b in beats:
+         bid = b["beat_id"]
+@@ -705,7 +713,7 @@ def compile_reel(a):
+         bshot = b.get("shot", {})
+         key = (f"L4|{w}x{h}@{fps}|{sheet.get('metadata', {}).get('fit', 'crop')}|report={is_source_report(b)}"
+                f"|{dur:.3f}|{bshot.get('motion', '')}"
+-               f"|{bshot.get('focus', '')}|{bshot.get('treatment', '')}|"
++               f"|{bshot.get('focus', '')}|{bshot.get('treatment', '')}|xf={xfade_d:.3f}|"
+                + (sha1(src) if src else "slate"))
+         if a.force or manifest.get(bid) != key or not out.exists():
+             src, status = compile_clip(folder, b, out, w, h, fps, font, work,
+@@ -733,6 +741,9 @@ def compile_reel(a):
+         return (s.get("motion")
+                 or ("kenburns" if s.get("type") == "STILL"
+                     else (s.get("type") or "?").lower()))
++    if xfade_d > 0:
++        print(f"[art] transitions: {xfade_style} crossfade {xfade_d:.2f}s, each starting on the "
++              f"next beat's first audio frame (audio clock unchanged)")
+     hist = Counter(_eff_motion(b) for b in beats)
+     print("[art] motion histogram: "
+           + "  ".join(f"{k}:{n}" for k, n in hist.most_common()))
+@@ -791,7 +802,15 @@ def compile_reel(a):
+         title_png = work / "channel_title.png"
+         make_channel_title_png(title_png, channel_title, font, int(h * 0.030))
+ 
+-    cmd = [FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", lst]
++    if xfade_d > 0:
++        cmd = [FFMPEG, "-y"]
++        for b in beats:
++            cmd += ["-i", str(clips / (b['beat_id'] + '.mp4'))]
++        v_inputs = len(beats)
++    else:
++        cmd = [FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", lst]
++        v_inputs = 1
++    a_idx = v_inputs
+     cmd += (["-i", str(audio)] if audio else
+             ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"])
+     for png, ts, dur in label_pngs:
+@@ -800,12 +819,23 @@ def compile_reel(a):
+         cmd += ["-i", str(title_png)]
+ 
+     fc = []
+-    n_label_inputs = 2 + len(label_pngs)   # 0=video, 1=audio, 2..=labels
+-    if label_pngs or title_png:
+-        prev = "0:v"
++    n_label_inputs = a_idx + 1 + len(label_pngs)   # video input(s), audio, labels, title
++    base = "0:v"
++    if xfade_d > 0:
++        for i in range(v_inputs):
++            fc.append(f"[{i}:v]tpad=stop_mode=clone:stop_duration={xfade_d:.3f},"
++                      f"setpts=PTS-STARTPTS[p{i}]")
++        base, off = "p0", 0.0
++        for i in range(1, v_inputs):
++            off += beat_duration(beats[i - 1])          # beat i's audio starts here
++            fc.append(f"[{base}][p{i}]xfade=transition={xfade_style}:duration={xfade_d:.3f}"
++                      f":offset={off:.3f}[x{i}]")
++            base = f"x{i}"
++    if label_pngs or title_png or xfade_d > 0:
++        prev = base
+         for i, (png, ts, dur) in enumerate(label_pngs):
+             nxt = f"v{i}"
+-            fc.append(f"[{prev}][{i + 2}:v]overlay=16:H-h-16:"
++            fc.append(f"[{prev}][{a_idx + 1 + i}:v]overlay=16:H-h-16:"
+                       f"enable='between(t,{ts:.3f},{ts + dur:.3f})'[{nxt}]")
+             prev = nxt
+         if title_png:
+@@ -820,9 +850,9 @@ def compile_reel(a):
+         else:
+             fc.append(f"[{prev}]null[vout]")
+     if fc:
+-        cmd += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "1:a"]
++        cmd += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{a_idx}:a"]
+     else:
+-        cmd += ["-map", "0:v", "-map", "1:a"]
++        cmd += ["-map", "0:v", "-map", f"{a_idx}:a"]
+     cmd += ["-c:v", "libx264", "-preset", "slow", "-crf", "16",
+             "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest",
+             "-t", f"{total:.3f}", str(out)]
+diff --git a/runtime/scripts/type_check.py b/runtime/scripts/type_check.py
+index 391033f..f3a96f9 100644
+--- a/runtime/scripts/type_check.py
++++ b/runtime/scripts/type_check.py
+@@ -344,6 +344,11 @@ MANIM_MATH_CANVAS_PATTERNS: set[str] = set()
+ # "medium-dark local background" around a "dark text blob" (the card background pixel cluster).
+ # These are structural brand marks, not typography — §8.3b is inapplicable.
+ DARK_BACKGROUND_MARK_PATTERNS = {
++    # PepperScreenshot: a REAL screenshot of a captured application (Pepper's panel, written by its
++    # own browser test). Its UI labels, dim-on-dark text and adjacent chips are image pixel content,
++    # not designed typography — fixing them would mean altering the evidence. The caption and spark
++    # line around the image are authored type at >= the floor. Same reasoning as GodotDesignFigure.
++    "PepperScreenshot",
+     "GuidebookPage",    # B23 (online variant: DARK card with CREAM MonogramMark),
+                         # B32 (contact variant: DARK left panel with CREAM SignatureMark)
+     "MbgSocialCrops",   # B24 (DARK banner strip with CREAM SignatureMark)
+@@ -363,6 +368,11 @@ DARK_BACKGROUND_MARK_PATTERNS = {
+ # ~9-11× is below the 15× flat-bar filter → detected as a text blob → false overlap.
+ # These are design-correct layouts, not real readability bugs.
+ BBOX_OVERLAP_EXEMPT_PATTERNS = {
++    # PepperScreenshot: a REAL screenshot of a captured application (Pepper's panel, written by its
++    # own browser test). Its UI labels, dim-on-dark text and adjacent chips are image pixel content,
++    # not designed typography — fixing them would mean altering the evidence. The caption and spark
++    # line around the image are authored type at >= the floor. Same reasoning as GodotDesignFigure.
++    "PepperScreenshot",
+     "B03_ClusterTopology",   # AICR tier cards: INK border frame ≠ text run; labels inside by design
+     "B02_GPUNodeTable",      # AICR GPU node table: INK header box border ≠ text run; headers inside by design
+     "B03_HookMechanism",     # simple-hooks: flow-diagram nodes (RoundedRectangle + interior label); design-correct
+@@ -598,6 +608,11 @@ PROSE_PATTERNS = {"MedhavyConceptCard", "TwoColumnCard", "PredictCard",
+ # claude register (see BANNED_PATTERNS_CLAUDE below). The standalone sketch-explainer
+ # skill has its own lane; the ban only fires when metadata.channel is claude-register.
+ HAND_DRAWN_PATTERNS = {
++    # PepperScreenshot: a REAL screenshot of a captured application (Pepper's panel, written by its
++    # own browser test). Its UI labels, dim-on-dark text and adjacent chips are image pixel content,
++    # not designed typography — fixing them would mean altering the evidence. The caption and spark
++    # line around the image are authored type at >= the floor. Same reasoning as GodotDesignFigure.
++    "PepperScreenshot",
+     # GodotDesignFigure: a full-width figure slot that carries a real Godot engine capture
+     # (HUD text at capture size) or a design diagram supplied by the reel. That text is image
+     # pixel content, not designed typography; the chips/title/status around it stay checked.
